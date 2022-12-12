@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/components/header.js"></script>
+    <script src="/js/jquery-3.6.1.js"></script>
+    <script>
+        const languageDropdownBinding = () => {
+            const languageButton = $("#menu-button")
+            const languageMenu = $("#dropdown__language")
+            languageButton.click(() => { languageMenu.toggle(100) })
+        }
+        window.onload = () => {
+            languageDropdownBinding()
+        }
+    </script>
     <title>Tiger Migration - Focus on Turkish Immigration</title>
     <link rel="stylesheet" href="/css/comm.css">
     <style type="text/tailwindcss">
@@ -16,45 +28,62 @@
             @apply container mx-auto grid grid-cols-12;
             width: 100%;
         }
+
         .logo-wrap {
             @apply col-span-4 flex items-center;
         }
+
         .logo-wrap > div {
             @apply ml-5;
         }
+
         #header-nav-list {
             @apply col-span-6 w-full flex justify-around items-center;
         }
+
         #header-nav-list li {
             @apply relative;
         }
-        #header-nav-list a{
+
+        #header-nav-list a {
             @apply text-xl transition-all duration-150;
             color: var(--color-secondary);
         }
-        #header-nav-list a:hover{
+
+        #header-nav-list a:hover {
             color: var(--color-primary);
         }
+
         .current-page {
             color: var(--color-primary) !important;
         }
+
         .current-page::after {
             @apply absolute w-full -bottom-4 left-0 rounded-full h-1;
             content: "";
             background-color: var(--color-primary);
         }
+
         .language-wrap {
-            @apply col-span-2;
+            @apply col-span-2 relative inline-block text-left;
         }
+
+        #menu-button {
+            @apply flex justify-end items-center h-full;
+        }
+
         .logo-text-primary {
             font-size: 1.5em;
         }
+
         .logo-text-secondary {
             color: var(--color-secondary);
             font-size: 1em;
         }
-        .language-wrap {
-            @apply flex justify-end items-center;
+
+        #dropdown__language {
+            @apply absolute hidden right-0 -bottom-28 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg
+            ring-1 ring-black ring-opacity-5 focus:outline-none transition-all duration-75;
         }
     </style>
     <style type="text/tailwindcss">
@@ -87,21 +116,26 @@
         <div class="language-wrap">
             <a href="javascript:void(0)" id="menu-button" aria-expanded="true" aria-haspopup="true">
                 English
-                <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                     fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clip-rule="evenodd"/>
                 </svg>
             </a>
-            <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div id="dropdown__language" role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
+                 tabindex="-1">
                 <div class="py-1" role="none">
                     <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
-                    <form method="POST" action="#" role="none">
-                        <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-                    </form>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-100 block px-4 py-2 text-sm"
+                       role="menuitem" tabindex="-1" id="menu-item-0">Turkish</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-100 block px-4 py-2 text-sm"
+                       role="menuitem" tabindex="-1" id="menu-item-1">Chinese(Traditional)</a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-100 block px-4 py-2 text-sm"
+                       role="menuitem" tabindex="-1" id="menu-item-2">English(United States)</a>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
