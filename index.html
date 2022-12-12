@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tiger Migration - Focus on Turkish Immigration</title>
+    <link rel="stylesheet" href="/css/comm.css">
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+    <style type="text/tailwindcss">
+        .header-container {
+            @apply container mx-auto grid grid-cols-12;
+            width: 100%;
+        }
+        .logo-wrap {
+            @apply col-span-4 flex items-center;
+        }
+        .logo-wrap > div {
+            @apply ml-5;
+        }
+        #header-nav-list {
+            @apply col-span-6 w-full flex justify-around items-center;
+        }
+        #header-nav-list li {
+            @apply relative;
+        }
+        #header-nav-list a{
+            @apply text-xl transition-all duration-150;
+            color: var(--color-secondary);
+        }
+        #header-nav-list a:hover{
+            color: var(--color-primary);
+        }
+        .current-page {
+            color: var(--color-primary) !important;
+        }
+        .current-page::after {
+            @apply absolute w-full -bottom-4 left-0 rounded-full h-1;
+            content: "";
+            background-color: var(--color-primary);
+        }
+        .language-wrap {
+            @apply col-span-2;
+        }
+        .logo-text-primary {
+            font-size: 1.5em;
+        }
+        .logo-text-secondary {
+            color: var(--color-secondary);
+            font-size: 1em;
+        }
+        .language-wrap {
+            @apply flex justify-end items-center;
+        }
+    </style>
+    <style type="text/tailwindcss">
+        .main {
+            @apply clear-both;
+        }
+    </style>
+    <style type="text/tailwindcss">
+        .footer {
+            @apply clear-both;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="header-container">
+        <div class="logo-wrap">
+            <img src="/img/svg/logo.svg" alt="Tiger Migration Logo">
+            <div class="flex flex-col">
+                <h1 class="logo-text-primary">Tiger Migration</h1>
+                <h2 class="logo-text-secondary">Professional·Focus on Turkish Immigration</h2>
+            </div>
+        </div>
+        <ul id="header-nav-list">
+            <li><a class="current-page" href="#">Home</a></li>
+            <li><a href="#">Local Conditions</a></li>
+            <li><a href="#">Immigration Services</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+        <div class="language-wrap">
+            <a href="javascript:void(0)" id="menu-button" aria-expanded="true" aria-haspopup="true">
+                English
+                <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                <div class="py-1" role="none">
+                    <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                    <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                    <form method="POST" action="#" role="none">
+                        <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="main"></div>
+<div id="footer">©2022 By Tiger.com All rights reserved.</div>
+</body>
+</html>
