@@ -195,7 +195,7 @@
             padding: 50px 0;
         }
 
-        .consultants-top {
+        .section-top {
             @apply text-xl;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
@@ -208,21 +208,53 @@
             width: 800px;
         }
 
-        .primary-consultants-title {
+        .section-title {
             @apply my-5 text-6xl font-normal text-center;
             line-height: 1.15;
         }
 
-        .secondary-consultants-title {
+        .section-intro {
             @apply text-center;
             font-size: 1.4em;
             color: var(--color-secondary);
         }
 
         .swiper {
-            max-width: 1300px;
-            min-width: 600px;
+            /*max-width: 1920px;*/
+            /*min-width: 600px;*/
+            width: auto;
+            /*width: 95%;*/
             height: 420px;
+        }
+
+        .swiper-page-btn {
+            @apply absolute top-1/2 transform -translate-y-1/2 shadow-lg transition-all duration-150;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--color-secondary);
+            font-size: 1.5em;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .swiper-page-btn:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .swiper-page-btn:after {
+            font-size: 1em;
+        }
+
+        .swiper-button-prev {
+            @apply -translate-x-1/2 left-0;
+        }
+
+        .swiper-button-next {
+            @apply translate-x-1/2 right-0;
         }
 
         .swiper-slide {
@@ -296,13 +328,13 @@
     </div>
     <div class="consultants-wrap">
         <div class="consultants-title-wrap">
-            <div class="half-opacity-tag consultants-top">What we do</div>
-            <div class="primary-consultants-title">Immigration Consultant Consultation</div>
-            <div class="secondary-consultants-title">
+            <div class="half-opacity-tag section-top">What we do</div>
+            <div class="section-title">Immigration Consultant Consultation</div>
+            <div class="section-intro">
                 24-hour consulting services for you to develop exclusive programs according to your actual needs
             </div>
         </div>
-        <div class="consultants-swiper-container">
+        <div class="relative">
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -343,9 +375,9 @@
                     </div>
                 </div>
 
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
             </div>
+            <div class="swiper-button-prev swiper-page-btn"></div>
+            <div class="swiper-button-next swiper-page-btn"></div>
 
         </div>
     </div>
@@ -356,12 +388,10 @@
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
-        loop: false,
         rewind: true,
         spaceBetween:24,
         centeredSlides: false,
         slidesPerView: 'auto',
-
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',
