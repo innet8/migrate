@@ -224,10 +224,10 @@
 
         .swiper {
             /*max-width: 1920px;*/
-            /*min-width: 600px;*/
+            min-width: 1280px;
             width: auto;
             /*width: 95%;*/
-            height: 420px;
+            height: 450px;
         }
 
         .swiper-page-btn {
@@ -261,11 +261,39 @@
         }
 
         .swiper-slide {
-            @apply rounded-lg px-8 py-4 flex flex-col justify-center items-center;
-            background-color: var(--color-card-background);
+            @apply relative rounded-lg overflow-hidden;
             min-width: 282px;
             max-width: 300px;
             height: 426px;
+        }
+
+        .normal {
+            @apply absolute top-0 left-0 w-full h-full group-hover:opacity-0 opacity-100 px-8 py-4 flex flex-col
+            justify-center items-center transition-all;
+            background-color: var(--color-card-background);
+        }
+
+        .hovered {
+            @apply absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 flex flex-col
+            justify-center items-center transition-all;
+            background-color: var(--color-primary-light);
+        }
+
+        .qrcode-desc {
+            @apply my-2;
+            color: var(--color-secondary);
+        }
+
+        .consultant-phone {
+            @apply text-xl mt-9;
+            color: var(--color-primary);
+        }
+
+        .consultant-phone img {
+            vertical-align: middle;
+            float: left;
+            margin-right: 0.5em;
+            transform: translateY(3px);
         }
 
         .consultant-icon {
@@ -388,41 +416,92 @@
         <div class="relative">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="/img/homepage/consultant_1.png" alt class="consultant-icon">
-                        <h1 class="consultant-name">Harry Abraham</h1>
-                        <h2 class="consultant-title">Senior Immigration Planner</h2>
-                        <p class="consultant-intro">
-                            10 years of experience in the immigration industry, specializing in
-                            Malta, Japan, Turkey and other countries for immigration status.
-                        </p>
+                    <div class="swiper-slide group">
+                        <div class="normal">
+                            <img src="/img/homepage/consultant_1.png" alt class="consultant-icon">
+                            <h1 class="consultant-name">Harry Abraham</h1>
+                            <h2 class="consultant-title">Senior Immigration Planner</h2>
+                            <p class="consultant-intro">
+                                10 years of experience in the immigration industry, specializing in
+                                Malta, Japan, Turkey and other countries for immigration status.
+                            </p>
+                        </div>
+                        <div class="hovered">
+                            <img src="/img/svg/qrcode_sample.svg" alt width="160" height="160">
+                            <span class="qrcode-desc">
+                                Chat now by scanning the code
+                            </span>
+                            <span class="consultant-phone">
+                                <img src="/img/svg/icon_phone.svg" alt width="20" height="20">
+                                188 1234 5678
+                            </span>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="/img/homepage/consultant_2.png" alt class="consultant-icon">
-                        <h1 class="consultant-name">Thomas Novak</h1>
-                        <h2 class="consultant-title">Senior Immigration Planner</h2>
-                        <p class="consultant-intro">
-                            7 years of experience in the immigration industry, specializing in Turkey, Vanuatu, Canada
-                            and other countries for immigration status.
-                        </p>
+                    <div class="swiper-slide group">
+                        <div class="normal">
+                            <img src="/img/homepage/consultant_2.png" alt class="consultant-icon">
+                            <h1 class="consultant-name">Thomas Novak</h1>
+                            <h2 class="consultant-title">Senior Immigration Planner</h2>
+                            <p class="consultant-intro">
+                                7 years of experience in the immigration industry, specializing in Turkey, Vanuatu, Canada
+                                and other countries for immigration status.
+                            </p>
+                        </div>
+                        <div class="hovered">
+                            <img src="/img/svg/qrcode_sample.svg" alt width="160" height="160">
+                            <span class="qrcode-desc">
+                                Chat now by scanning the code
+                            </span>
+                            <span class="consultant-phone">
+                                <img src="/img/svg/icon_phone.svg" alt width="20" height="20">
+                                188 1234 5678
+                            </span>
+                        </div>
+
                     </div>
-                    <div class="swiper-slide">
-                        <img src="/img/homepage/consultant_3.png" alt class="consultant-icon">
-                        <h1 class="consultant-name">Edward Willey</h1>
-                        <h2 class="consultant-title">Senior Immigration Planner</h2>
-                        <p class="consultant-intro">
-                            9 years of experience in the immigration industry, specializing in Korea, Singapore, Turkey
-                            and other countries immigration status processing.
-                        </p>
+                    <div class="swiper-slide group">
+                        <div class="normal">
+                            <img src="/img/homepage/consultant_3.png" alt class="consultant-icon">
+                            <h1 class="consultant-name">Edward Willey</h1>
+                            <h2 class="consultant-title">Senior Immigration Planner</h2>
+                            <p class="consultant-intro">
+                                9 years of experience in the immigration industry, specializing in Korea, Singapore, Turkey
+                                and other countries immigration status processing.
+                            </p>
+                        </div>
+                        <div class="hovered">
+                            <img src="/img/svg/qrcode_sample.svg" alt width="160" height="160">
+                            <span class="qrcode-desc">
+                                Chat now by scanning the code
+                            </span>
+                            <span class="consultant-phone">
+                                <img src="/img/svg/icon_phone.svg" alt width="20" height="20">
+                                188 1234 5678
+                            </span>
+                        </div>
+
                     </div>
-                    <div class="swiper-slide">
-                        <img src="/img/homepage/consultant_4.png" alt class="consultant-icon">
-                        <h1 class="consultant-name">Berry Krebs</h1>
-                        <h2 class="consultant-title">Senior Immigration Planner</h2>
-                        <p class="consultant-intro">
-                            9 years of experience in the immigration industry, specializing in Australia, Ireland,
-                            Turkey and other countries for immigration status.
-                        </p>
+                    <div class="swiper-slide group">
+                        <div class="normal">
+                            <img src="/img/homepage/consultant_4.png" alt class="consultant-icon">
+                            <h1 class="consultant-name">Berry Krebs</h1>
+                            <h2 class="consultant-title">Senior Immigration Planner</h2>
+                            <p class="consultant-intro">
+                                9 years of experience in the immigration industry, specializing in Australia, Ireland,
+                                Turkey and other countries for immigration status.
+                            </p>
+                        </div>
+                        <div class="hovered">
+                            <img src="/img/svg/qrcode_sample.svg" alt width="160" height="160">
+                            <span class="qrcode-desc">
+                                Chat now by scanning the code
+                            </span>
+                            <span class="consultant-phone">
+                                <img src="/img/svg/icon_phone.svg" alt width="20" height="20">
+                                188 1234 5678
+                            </span>
+                        </div>
+
                     </div>
                 </div>
 
