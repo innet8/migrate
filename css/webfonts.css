@@ -1,0 +1,8 @@
+@font-face {font-family: "HarmonyOS Sans";
+    src: url("./webfonts/HarmonyOS_Sans/@font-face/876476f9c21d688286b0ec4bf47013a7.eot"); /* IE9*/
+    src: url("./webfonts/HarmonyOS_Sans/@font-face/876476f9c21d688286b0ec4bf47013a7.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./webfonts/HarmonyOS_Sans/@font-face/876476f9c21d688286b0ec4bf47013a7.woff2") format("woff2"), /* chrome、firefox */
+    url("./webfonts/HarmonyOS_Sans/@font-face/876476f9c21d688286b0ec4bf47013a7.woff") format("woff"), /* chrome、firefox */
+    url("./webfonts/HarmonyOS_Sans/@font-face/876476f9c21d688286b0ec4bf47013a7.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("./webfonts/HarmonyOS_Sans/@font-face/876476f9c21d688286b0ec4bf47013a7.svg#HarmonyOS Sans") format("svg"); /* iOS 4.1- */
+}

@@ -1,4 +1,38 @@
 :root {
     --color-primary: #FF7F00;
+    --color-primary-most-opaque: #FF7F0019;
     --color-secondary: #666;
+    --color-card-background: #F9F9F9;
+}
+
+body{
+    font-family: "HarmonyOS Sans", -apple-system, serif;
+}
+
+.orange-underline {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.orange-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 33%;
+    background-color: var(--color-primary);
+    z-index: -1;
+}
+
+.half-opacity-tag {
+    width: fit-content;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
