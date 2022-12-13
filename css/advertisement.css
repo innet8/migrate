@@ -1,0 +1,70 @@
+.adv-separator {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    color: white;
+    border-radius: 1rem;
+    background-color: var(--color-primary);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.adv-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 834px;
+    z-index: -1;
+}
+
+.adv-bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .4;
+    z-index: -1;
+}
+
+.adv-texts {
+    /*padding: 3rem 2.75rem; !* 48px 44px*!*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    margin-left: 3rem;
+    z-index: 1;
+}
+
+.adv-primary-title {
+    font-size: 40px;
+}
+
+.adv-tags {
+    display: flex;
+}
+
+.adv-tag {
+    padding: 0.5rem 0.75rem; /* 8px 12px */
+    margin-right: 1rem; /* 16px */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+    font-family: -apple-system, Microsoft YaHei, sans-serif;
+}
+
+.adv-dartboard {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(-33.3%) translateY(-50%);
+    z-index: 1;
+}

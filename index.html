@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--    Components-->
     <script src="/js/components/header.js"></script>
     <script src="/js/components/footer.js"></script>
+    <script src="/js/components/advertisement.js"></script>
+
     <script src="/js/jquery-3.6.1.js"></script>
     <script src="/js/render.js"></script>
+    <script src="/js/lateImg.js"></script>
+
+    <link rel="stylesheet" href="/css/advertisement.css">
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -27,23 +34,33 @@
         }
 
         /**
+         * render and push components to some selector's childrenNodes from components array,
+         * each component has a array for target nodes.
+         * @param {Array} componentsList
+         * */
+        const renderComponents = (componentsList) => {
+            componentsList.forEach(item => {
+                item.roots.forEach(target => {
+                    $(target).append(item.component)
+                })
+            })
+        }
+
+        /**
          * dynamic change .intro-text's height depends on #background-homepage's height
          * */
-        const introTextHeightAdjustment = () => {
-            const introText = $(".intro-text")
-            const backgroundHomepage = $("#background-homepage")
-            introText.css("height", backgroundHomepage.height())
-        }
+        // const introTextHeightAdjustment = () => {
+        //     const introText = $(".intro-text")
+        //     const backgroundHomepage = $("#background-homepage")
+        //     introText.css("height", backgroundHomepage.height())
+        // }
 
         window.onload = () => {
-            components.forEach(component => render(document.querySelector(component.root), component.component))
-
             languageDropdownBinding()
             // introTextHeightAdjustment()
+            lateImages.forEach(imgSelector => lateImg(imgSelector))
+            renderComponents(components)
         }
-        window.addEventListener("resize", () => {
-            // introTextHeightAdjustment()
-        })
     </script>
     <title>Tiger Migration - Focus on Turkish Immigration</title>
     <link rel="stylesheet" href="/css/webfonts.css">
@@ -52,6 +69,17 @@
         @tailwind base;
         @tailwind components;
         @tailwind utilities;
+    </style>
+    <style type="text/tailwindcss">
+        /*Background of advertisement needs to be defined manually*/
+        .adv-bg {
+            background-image: url("/img/svg/advertisement_homepage.svg");
+        }
+
+        .adv-bg:before {
+            background-image: url("/img/svg/advertisement_lines.svg");
+        }
+
     </style>
     <style type="text/tailwindcss">
         .header-container {
@@ -143,7 +171,8 @@
         }
 
         .intro-company-name {
-            @apply text-2xl;
+            @apply text-2xl uppercase;
+            font-weight: bold;
             padding-top: 1rem;
             padding-bottom: 1rem;
             background-color: rgba(255, 255, 255, 0.1);
@@ -190,33 +219,7 @@
         /*First page content ends here*/
         /*Consultants content starts here*/
         .consultants-wrap {
-            @apply w-full flex flex-col justify-center items-center;
             height: 80%;
-            padding: 50px 0;
-        }
-
-        .section-top {
-            @apply text-xl;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            background-color: var(--color-primary-most-opaque);
-            color: var(--color-primary);
-        }
-
-        .consultants-title-wrap {
-            @apply mb-20 flex flex-col justify-center items-center;
-            width: 800px;
-        }
-
-        .section-title {
-            @apply my-5 text-6xl font-normal text-center;
-            line-height: 1.15;
-        }
-
-        .section-intro {
-            @apply text-center;
-            font-size: 1.4em;
-            color: var(--color-secondary);
         }
 
         .swiper {
@@ -283,6 +286,54 @@
         }
 
         /*Consultants content ends here*/
+        /*Core strengths wrap starts here*/
+        .core-strengths-wrap {
+            @apply relative;
+            padding-top: 240px;
+            background-color: var(--color-card-background);
+            height: 1050px;
+        }
+
+        .strengths-grid {
+            @apply grid grid-cols-3 gap-4;
+            max-width: 90%;
+            min-width: 1200px;
+        }
+
+        .strength-card {
+            @apply relative pt-4 flex flex-row justify-start items-start bg-white rounded-lg overflow-hidden;
+            width: 384px;
+            height: 114px;
+            margin-bottom: 24px;
+        }
+        .strength-card:before {
+            @apply absolute top-0 left-0;
+            background-color: var(--color-primary);
+            content: "";
+            height: 100%;
+            width: 8px;
+            z-index: 1;
+        }
+
+        .strength-img-container {
+            @apply row-span-3;
+            width: 384px;
+            height: 384px;
+        }
+
+        .strength-card-num {
+            @apply ml-6 mr-6 relative text-4xl font-bold;
+            z-index: 2;
+            color: var(--color-primary);
+        }
+
+        .strength-text {
+            width: 270px;
+            overflow-x: clip;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        /*Core strengths wrap ends here*/
     </style>
     <style type="text/tailwindcss">
         .footer-wrap {
@@ -299,7 +350,7 @@
     <div class="masthead">
         <img src="/img/homepage/bg_home.png" alt class="background" id="background-homepage">
         <div class="intro-text">
-            <div class="half-opacity-tag intro-company-name">Tiger Migration</div>
+            <div class="half-opacity-tag intro-company-name rounded-full">Tiger Migration</div>
             <div class="primary-intro">
                 <p>Turkish passport investment</p>
                 <p class="orange-underline">(home purchase)</p>
@@ -326,9 +377,9 @@
             </div>
         </div>
     </div>
-    <div class="consultants-wrap">
-        <div class="consultants-title-wrap">
-            <div class="half-opacity-tag section-top">What we do</div>
+    <div class="consultants-wrap section-wrap">
+        <div class="section-title-wrap">
+            <div class="half-opacity-tag section-top rounded-full">What we do</div>
             <div class="section-title">Immigration Consultant Consultation</div>
             <div class="section-intro">
                 24-hour consulting services for you to develop exclusive programs according to your actual needs
@@ -381,6 +432,62 @@
 
         </div>
     </div>
+    <div class="core-strengths-wrap section-wrap" id="strengths-wrap">
+        <div class="section-title-wrap">
+            <div class="half-opacity-tag section-top rounded-full">Why choose us</div>
+            <div class="section-title">Tiger Core Strengths</div>
+        </div>
+
+        <ul class="strengths-grid">
+            <li class="strength-card card-shadow" id="strength-1">
+                <span class="strength-card-num">01</span>
+                <span class="strength-text">
+                    Property advantages, discounts on purchases, well below market price
+                </span>
+            </li>
+            <li class="strength-img-container">
+                <img
+                        class="strength-img"
+                        src="/img/homepage/core_strengths_compressed.png"
+                        data-src="./img/svg/core_strengths.svg"
+                        alt
+                        width="384"
+                        height="384"
+                >
+            </li>
+            <li class="strength-card card-shadow" id="strength-4">
+                <span class="strength-card-num">04</span>
+                <span class="strength-text">
+                    With a strong project development and risk control system to make your migration path safer
+                </span>
+            </li>
+            <li class="strength-card card-shadow" id="strength-2">
+                <span class="strength-card-num">02</span>
+                <span class="strength-text">
+                    Professional team at home and abroad, helping many people to realize their dreams overseas
+                </span>
+            </li>
+            <li class="strength-card card-shadow" id="strength-5">
+                <span class="strength-card-num">05</span>
+                <span class="strength-text">
+                    Gathering three major law firms + 15 senior professional lawyers to escort
+                </span>
+            </li>
+            <li class="strength-card card-shadow" id="strength-3">
+                <span class="strength-card-num">03</span>
+                <span class="strength-text">
+                    The first to grasp the immigration policy dynamics, to win the first opportunity for customers
+                </span>
+            </li>
+            <li class="strength-card card-shadow" id="strength-6">
+                <span class="strength-card-num">06</span>
+                <span class="strength-text">
+                    Login interview guidance to increase the success rate of getting a visa
+                </span>
+            </li>
+        </ul>
+
+    </div>
 </div>
 <div id="footer"></div>
 <script>
@@ -389,7 +496,7 @@
         // Optional parameters
         direction: 'horizontal',
         rewind: true,
-        spaceBetween:24,
+        spaceBetween: 24,
         centeredSlides: false,
         slidesPerView: 'auto',
         // Navigation arrows
