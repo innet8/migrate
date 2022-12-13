@@ -34,7 +34,7 @@
         }
 
         /**
-         * render and push components to some selector's childrenNodes from components array,
+         * Render and push components to some selector's childrenNodes from components array,
          * each component has a array for target nodes.
          * @param {Array} componentsList
          * */
@@ -44,6 +44,18 @@
                     $(target).append(item.component)
                 })
             })
+        }
+
+        /**
+         * Submit button in contact form click event
+         * */
+        const submitBtnClick = () => {
+            const name = $("#form-name").val()
+            const email = $("#form-email").val()
+            const phone = $("#form-phone").val()
+            const message = $("#form-msg").val()
+            let form = {name, email, phone, message}
+            console.log("submit clicked, form data: ", form)
         }
 
         /**
@@ -334,6 +346,7 @@
             height: 114px;
             margin-bottom: 24px;
         }
+
         .strength-card:before {
             @apply absolute top-0 left-0;
             background-color: var(--color-primary);
@@ -361,7 +374,81 @@
             font-size: 16px;
             line-height: 1.5;
         }
+
         /*Core strengths wrap ends here*/
+        /*Form section wrap starts here*/
+        .form-section-wrap {
+            @apply relative mb-10 flex flex-row justify-center items-center;
+            padding-top: 240px;
+            min-height: fit-content;
+        }
+
+        .form-left {
+            @apply mr-6;
+            width: 600px;
+            max-height: 700px;
+            overflow-wrap: anywhere;
+        }
+
+        .form-right {
+            @apply rounded-lg p-9;
+            width: 600px;
+            height: fit-content;
+            box-shadow: 0 4px 30px rgba(159, 159, 159, 0.3);
+        }
+
+        .form-right label {
+            padding: 10px 0;
+            display: block;
+        }
+
+        .form-right input, textarea {
+            @apply w-full rounded px-4 border;
+        }
+
+        .form-right input {
+            @apply h-14;
+        }
+
+        .form-right textarea {
+            height: 200px;
+        }
+
+        .form-right .submit {
+            @apply w-full h-14 rounded text-white flex justify-center items-center;
+            background-color: var(--color-primary);
+        }
+
+        .form-input-item {
+            @apply mb-4;
+        }
+
+        .form-section-title-wrap {
+            @apply w-full justify-start items-start;
+        }
+
+        .img-container {
+            @apply relative;
+            width: 600px;
+            height: 600px;
+        }
+
+        .img-container:before {
+            @apply absolute bottom-0 left-0;
+            content: "";
+            width: 100%;
+            height: 500px;
+            background-color: var(--color-primary);
+            border-top-right-radius: 48px;
+            z-index: -1;
+        }
+
+        .img-container img {
+            @apply absolute top-0 left-1/2 transform -translate-x-1/2;
+            z-index: 1;
+        }
+
+        /*Form section wrap ends here*/
     </style>
     <style type="text/tailwindcss">
         .footer-wrap {
@@ -443,7 +530,8 @@
                             <h1 class="consultant-name">Thomas Novak</h1>
                             <h2 class="consultant-title">Senior Immigration Planner</h2>
                             <p class="consultant-intro">
-                                7 years of experience in the immigration industry, specializing in Turkey, Vanuatu, Canada
+                                7 years of experience in the immigration industry, specializing in Turkey, Vanuatu,
+                                Canada
                                 and other countries for immigration status.
                             </p>
                         </div>
@@ -465,7 +553,8 @@
                             <h1 class="consultant-name">Edward Willey</h1>
                             <h2 class="consultant-title">Senior Immigration Planner</h2>
                             <p class="consultant-intro">
-                                9 years of experience in the immigration industry, specializing in Korea, Singapore, Turkey
+                                9 years of experience in the immigration industry, specializing in Korea, Singapore,
+                                Turkey
                                 and other countries immigration status processing.
                             </p>
                         </div>
@@ -508,7 +597,6 @@
             </div>
             <div class="swiper-button-prev swiper-page-btn"></div>
             <div class="swiper-button-next swiper-page-btn"></div>
-
         </div>
     </div>
     <div class="core-strengths-wrap section-wrap" id="strengths-wrap">
@@ -566,6 +654,54 @@
             </li>
         </ul>
 
+    </div>
+    <div class="form-section-wrap section-wrap">
+        <div class="form-left">
+            <div class="form-section-title-wrap section-title-wrap">
+                <div class="half-opacity-tag section-top rounded-full">Call to action</div>
+                <div class="section-title text-left">Fill out the purchase request</div>
+                <div class="section-intro">
+                    Online Matching of Desired Properties
+                </div>
+            </div>
+            <div class="img-container">
+                <img
+                        class="form-img"
+                        src="/img/homepage/bg_form.png"
+                        alt
+                        width="432"
+                        height="600"
+                >
+            </div>
+        </div>
+        <div class="form-right">
+            <div class="form-name-wrap">
+                <div class="form-input-item">
+                    <label for="form-name">Your Name</label>
+                    <input id="form-name" type="text" placeholder="Please enter your name">
+                </div>
+                <div class="form-input-item">
+                    <label for="form-phone">Contact Number</label>
+                    <input id="form-phone" type="text" placeholder="Please enter contact number">
+                </div>
+                <div class="form-input-item">
+                    <label for="form-email">Email</label>
+                    <input id="form-email" type="text" placeholder="Please enter email">
+                </div>
+                <div class="form-input-item">
+                    <label for="form-msg">Message</label>
+                    <textarea
+                        id="form-msg"
+                        placeholder="Please leave a message here and we'll be replying as soon as possible."
+                    ></textarea>
+                </div>
+                <a href="javascript:void(0)" onclick="submitBtnClick()">
+                    <div class="submit">
+                        Submit
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
 <div id="footer"></div>
