@@ -14,7 +14,6 @@
     <script src="/js/jquery-3.6.1.js"></script>
     <script src="/js/lateImg.js"></script>
 
-    <link rel="stylesheet" href="/css/advertisement.css">
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -26,6 +25,7 @@
     <link rel="stylesheet" href="/css/comm.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/advertisement.css">
     <style type="text/tailwindcss">
         @tailwind base;
         @tailwind components;
@@ -212,11 +212,11 @@
 
         /*Consultants content ends here*/
         /*Core strengths wrap starts here*/
-        .core-strengths-wrap {
-            @apply relative;
+        .gap-section {
+            position: relative;
             padding-top: 240px;
-            background-color: var(--color-card-background);
             height: 1050px;
+            flex-direction: column;
         }
 
         .strengths-grid {
@@ -268,38 +268,32 @@
             min-height: fit-content;
         }
 
-        .form-left {
-            @apply mr-6;
+        .section-form {
             width: 600px;
-            max-height: 700px;
-            overflow-wrap: anywhere;
-        }
-
-        .form-right {
-            @apply rounded-lg p-9;
-            width: 600px;
+            padding: 2.25rem; /* 36px */
             height: fit-content;
+            border-radius: 0.5rem; /* 8px */
             box-shadow: 0 4px 30px rgba(159, 159, 159, 0.3);
         }
 
-        .form-right label {
+        .section-form label {
             padding: 10px 0;
             display: block;
         }
 
-        .form-right input, textarea {
+        .section-form input, textarea {
             @apply w-full rounded px-4 border;
         }
 
-        .form-right input {
+        .section-form input {
             @apply h-14;
         }
 
-        .form-right textarea {
+        .section-form textarea {
             height: 200px;
         }
 
-        .form-right .submit {
+        .section-form .submit {
             @apply w-full h-14 rounded text-white flex justify-center items-center;
             background-color: var(--color-primary);
         }
@@ -374,7 +368,7 @@
             </div>
         </div>
     </div>
-    <div class="consultants-wrap section-wrap">
+    <div class="consultants-wrap section-wrap flex-col">
         <div class="section-title-wrap">
             <div class="half-opacity-tag section-top rounded-full">What we do</div>
             <div class="section-title">Immigration Consultant Consultation</div>
@@ -481,7 +475,7 @@
             <div class="swiper-button-next swiper-page-btn"></div>
         </div>
     </div>
-    <div class="core-strengths-wrap section-wrap" id="strengths-wrap">
+    <div class="gap-section section-wrap" id="strengths-wrap">
         <div class="section-title-wrap">
             <div class="half-opacity-tag section-top rounded-full">Why choose us</div>
             <div class="section-title">Tiger Core Strengths</div>
@@ -537,8 +531,8 @@
         </ul>
 
     </div>
-    <div class="form-section-wrap section-wrap">
-        <div class="form-left">
+    <div class="form-section-wrap section-wrap flex-col">
+        <div class="section-contents">
             <div class="form-section-title-wrap section-title-wrap">
                 <div class="half-opacity-tag section-top rounded-full">Call to action</div>
                 <div class="section-title text-left">Fill out the purchase request</div>
@@ -548,15 +542,15 @@
             </div>
             <div class="img-container">
                 <img
-                        class="form-img"
-                        src="/img/homepage/bg_form.png"
-                        alt
-                        width="432"
-                        height="600"
+                    class="form-img"
+                    src="/img/homepage/bg_form.png"
+                    alt
+                    width="432"
+                    height="600"
                 >
             </div>
         </div>
-        <div class="form-right">
+        <div class="section-form">
             <div class="form-name-wrap">
                 <div class="form-input-item">
                     <label for="form-name">Your Name</label>
