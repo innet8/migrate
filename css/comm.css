@@ -64,6 +64,12 @@ body{
     align-items: center;
 }
 
+.section-title-wrap__left {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
 .section-top {
     font-weight: bold;
     padding-top: 0.5rem;

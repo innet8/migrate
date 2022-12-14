@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+            name="description"
+            lang="en"
+            content="Tiger Technology, a one-stop integrated cross-border service provider with a
+        focus on Turkish immigration services, is a global service provider."
+    />
+    <meta
+            name="description"
+            lang="zh_CN"
+            content="老虎科技,以土耳其移民服务为主的一站式综合跨境服务机构,面向全球服务."
+    />
+    <meta name="keywords" lang="en" content="UZAQ,Noodles,delicious,tasty"/>
+    <meta name="keywords" lang="zh_CN" content="移民,购房,定居"/>
+
     <title>Tiger Migration - Immigration Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -10,6 +24,12 @@
     <script src="/js/components/header.js"></script>
     <script src="/js/components/footer.js"></script>
     <script src="/js/render.js"></script>
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="/css/webfonts.css">
     <link rel="stylesheet" href="/css/comm.css">
@@ -27,17 +47,21 @@
         .immi-reasons {
             @apply flex flex-row justify-center items-start;
         }
+
         .immi-reason {
             @apply mx-9 flex flex-col justify-center items-center;
             width: 240px;
         }
+
         .immi-reason h1 {
             @apply mt-4 mb-6 text-xl;
         }
+
         .immi-reason p {
             @apply text-base;
             color: var(--color-secondary);
         }
+
         /* Immigration reasons end here */
         /* Home purchase reasons starts here */
         .section-media {
@@ -45,16 +69,20 @@
             width: 486px;
             height: 532px;
         }
+
         .purchase-img {
             @apply relative rounded-2xl;
             z-index: 1;
         }
+
         .purchase-desc {
             @apply absolute bg-white grid grid-cols-3;
             right: -12.5%;
             bottom: 0;
             box-shadow: 0 4px 30px rgba(159, 159, 159, 0.3);
+            border-radius: 0 8px 8px 8px;
         }
+
         .purchase-desc:before {
             @apply absolute;
             content: "";
@@ -66,38 +94,47 @@
             transform: translateY(-50%);
             z-index: 2;
         }
+
         .desc-img {
-            @apply relative flex justify-center items-center rounded-bl-lg;
+            @apply relative flex justify-center items-center;
             width: 120px;
             height: 120px;
             background-color: var(--color-primary);
             z-index: 5;
+            border-radius: 0 0 0 8px;
         }
+
         .desc-text {
-            @apply h-full relative col-span-2 pl-8 bg-white flex flex-col justify-center rounded-tr-lg rounded-br-lg;
+            @apply h-full relative col-span-2 pl-8 bg-white flex flex-col justify-center;
             z-index: 5;
+            border-radius: 0 8px 8px 8px;
         }
+
         .desc-addr {
             @apply text-sm;
             color: var(--color-secondary);
         }
+
         .section-contents {
-            @apply mr-0 ml-24;
+            @apply relative mr-0 ml-24;
         }
-        .purchase-advantages {
-            @apply flex flex-col justify-start items-start;
-        }
+
+        /*.purchase-advantages {*/
+        /*    !*@apply flex flex-col justify-start items-start;*!*/
+        /*}*/
         .purchase-advantage {
-            @apply mb-4 py-6 flex flex-row justify-center items-center bg-white rounded-lg;
+            @apply mb-4 p-6 flex flex-row justify-start items-center bg-white rounded-lg;
             width: 590px;
             box-shadow: 0 0 15px rgba(159, 159, 159, 0.15);
             transition: all 0.3s ease-in-out;
             border: 2px solid transparent;
         }
+
         .purchase-advantage:hover {
             box-shadow: 0 4px 30px rgba(159, 159, 159, 0.3);
             border: 2px solid var(--color-primary);
         }
+
         /*.purchase-img:before {*/
         /*    content: "";*/
         /*    position: absolute;*/
@@ -107,7 +144,106 @@
         /*    right: 0;*/
         /*    background-color: var(--color-secondary);*/
         /*}*/
+
+
+        .swiper {
+            /*max-width: 1920px;*/
+            /*min-width: 1280px;*/
+            /*width: auto;*/
+            /*width: 95%;*/
+            /*height: 450px;*/
+        }
+
+        .swiper-controllers {
+            @apply relative flex flex-row justify-end;
+            width: 100%;
+            height: 60px;
+        }
+
+        .swiper-page-btn {
+            @apply relative shadow-lg transition-all duration-150 ml-10;
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            background-color: white;
+            color: var(--color-secondary);
+            font-size: 1.5em;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .swiper-page-btn:hover {
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        .swiper-page-btn:after {
+            font-size: 1em;
+        }
+
+        .swiper-slide {
+            @apply relative overflow-hidden;
+            /*min-width: 282px;*/
+            /*max-width: 300px;*/
+            /*height: 426px;*/
+        }
+
         /* Home purchase reasons ends here */
+        /* Economic strength starts here */
+        .economic-section {
+            height: 700px;
+            margin: 240px 0 50px;
+            padding: 0;
+            align-items: flex-start;
+        }
+
+        .economic-media {
+            position: relative;
+            height: 100%;
+        }
+
+        .economic-media > img {
+            transform: translateY(50%);
+        }
+
+        .talk-card {
+            @apply absolute px-9 pb-9 flex flex-col justify-end rounded-2xl;
+            width: 560px;
+            height: 290px;
+            background-color: var(--color-card-background);
+            box-shadow: 0 4px 30px rgba(159, 159, 159, 0.3);
+        }
+
+        .talk-card:before {
+            @apply absolute left-9;
+            content: "";
+            background-image: url("/img/svg/ico_quoto.svg");
+            opacity: .3;
+            width: 58px;
+            height: 35px;
+            /*left: 5%;*/
+            top: 22.5%;
+        }
+
+        #talk-card-1 {
+            @apply -left-1/2 top-1/2 transform -translate-x-1/3 -translate-y-1/3;
+        }
+
+        #talk-card-2 {
+            @apply top-0 left-0 translate-x-1/4;
+        }
+
+        .talk-card h1 {
+            @apply text-xl mb-6;
+        }
+
+        .talk-card p {
+            @apply text-base;
+            color: var(--color-secondary);
+        }
+
+        /* Economic strength ends here */
     </style>
 </head>
 <body>
@@ -134,7 +270,8 @@
             <div class="immi-reason">
                 <img src="/img/svg/ico_location.svg" alt>
                 <h1>Prime Location</h1>
-                <p>Straddling Europe and Asia, it is the crossroads between Europe and Asia, surrounded by sea on three sides, and is the exit of the Black Sea</p>
+                <p>Straddling Europe and Asia, it is the crossroads between Europe and Asia, surrounded by sea on three
+                    sides, and is the exit of the Black Sea</p>
             </div>
             <div class="immi-reason">
                 <img src="/img/svg/ico_performance.svg" alt>
@@ -144,12 +281,14 @@
             <div class="immi-reason">
                 <img src="/img/svg/ico_education.svg" alt>
                 <h1>Good Education Level</h1>
-                <p>12 years of free and compulsory education, 174 public universities, and many high-quality international schools in England, Germany, and France</p>
+                <p>12 years of free and compulsory education, 174 public universities, and many high-quality
+                    international schools in England, Germany, and France</p>
             </div>
             <div class="immi-reason">
                 <img src="/img/svg/ico_travel.svg" alt>
                 <h1>Travel Convenience</h1>
-                <p>Fast track to the U.S. by applying for E1/E2 visas for 117 countries and territories with Turkish identity or Turkish identity</p>
+                <p>Fast track to the U.S. by applying for E1/E2 visas for 117 countries and territories with Turkish
+                    identity or Turkish identity</p>
             </div>
         </div>
     </div>
@@ -182,28 +321,117 @@
                 </div>
             </div>
             <div class="section-contents">
-                <div class="purchase-advantages">
-                    <div class="purchase-advantage">
-                        111
-                    </div>
-                    <div class="purchase-advantage">
-                        222
-                    </div>
-                    <div class="purchase-advantage">
-                        333
-                    </div>
-                    <div class="purchase-advantage">
-                        444
-                    </div>
-                    <div class="purchase-advantage">
-                        555
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>Average price $8,330 per square foot</span>
+                            </div>
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>Proximity to the port (only 1 km)</span>
+                            </div>
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>Just 100 meters from Marmaray metro station</span>
+                            </div>
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>
+                                It is a large and comfortable community where life,
+                                business and leisure are integrated
+                            </span>
+                            </div>
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>Well-appointed facilities and abundant living resources</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>Average price $8,330 per square foot</span>
+                            </div>
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>Proximity to the port (only 1 km)</span>
+                            </div>
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>Just 100 meters from Marmaray metro station</span>
+                            </div>
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>
+                                It is a large and comfortable community where life,
+                                business and leisure are integrated
+                            </span>
+                            </div>
+                            <div class="purchase-advantage">
+                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
+                                <span>Well-appointed facilities and abundant living resources</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+
+                <div class="swiper-controllers">
+                    <div class="swiper-button-prev swiper-page-btn"></div>
+                    <div class="swiper-button-next swiper-page-btn"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="economic-section section-wrap">
+        <div class="section-contents" id="country-overview">
+            <div class="section-title-wrap__left section-title-wrap">
+                <div class="half-opacity-tag section-top rounded-full">Strength</div>
+                <div class="section-title text-left">Turkish economic strength</div>
+            </div>
+        </div>
+        <div class="economic-media">
+            <img class="rounded-2xl" src="/img/services/bg_economic.png" alt>
+            <div class="talk-card" id="talk-card-1">
+                <h1>Rapid economic development</h1>
+                <p>
+                    China has become the second largest trading partner of Turkey.
+                    2021 Total Turkish exports to China grow by more than 50%.
+                    Number of Chinese companies operating in Turkey reaches 1,148 by the end of 2020
+                </p>
+            </div>
+            <div class="talk-card" id="talk-card-2">
+                <h1 class="talk-title">Rich tourism resources</h1>
+                <p class="talk-text">
+                    The 10th most popular tourist destination in the world.
+                    Istanbul Airport is one of the busiest airports in Europe.
+                    Turkey's total tourism revenue climbs 103% in 2021 reaching $24.482 billion
+                </p>
             </div>
         </div>
     </div>
 </div>
 <div id="footer"></div>
+<script>
+    // Swiper initialization
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        rewind: true,
+        loopFillGroupWithBlank: true,
+        slidesPerGroup: 1,
+        slidesPerView: 1,
+        // spaceBetween: 24,
+        centeredSlides: false,
+        // slidesPerView: 'auto',
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
 <script>
     const components = [
         {
