@@ -9,74 +9,22 @@
     <script src="/js/components/header.js"></script>
     <script src="/js/components/footer.js"></script>
     <script src="/js/components/advertisement.js"></script>
+    <script src="/js/render.js"></script>
 
     <script src="/js/jquery-3.6.1.js"></script>
-    <script src="/js/render.js"></script>
     <script src="/js/lateImg.js"></script>
 
     <link rel="stylesheet" href="/css/advertisement.css">
     <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script>
-        /**
-         * Language dropdown menu click event binding
-         * */
-        const languageDropdownBinding = () => {
-            const languageButton = $("#menu-button")
-            const languageMenu = $("#dropdown__language")
-            languageButton.click(() => {
-                languageMenu.toggle(100)
-            })
-        }
 
-        /**
-         * Render and push components to some selector's childrenNodes from components array,
-         * each component has a array for target nodes.
-         * @param {Array} componentsList
-         * */
-        const renderComponents = (componentsList) => {
-            componentsList.forEach(item => {
-                item.roots.forEach(target => {
-                    $(target).append(item.component)
-                })
-            })
-        }
-
-        /**
-         * Submit button in contact form click event
-         * */
-        const submitBtnClick = () => {
-            const name = $("#form-name").val()
-            const email = $("#form-email").val()
-            const phone = $("#form-phone").val()
-            const message = $("#form-msg").val()
-            let form = {name, email, phone, message}
-            console.log("submit clicked, form data: ", form)
-        }
-
-        /**
-         * dynamic change .intro-text's height depends on #background-homepage's height
-         * */
-        // const introTextHeightAdjustment = () => {
-        //     const introText = $(".intro-text")
-        //     const backgroundHomepage = $("#background-homepage")
-        //     introText.css("height", backgroundHomepage.height())
-        // }
-
-        window.onload = () => {
-            languageDropdownBinding()
-            // introTextHeightAdjustment()
-            lateImages.forEach(imgSelector => lateImg(imgSelector))
-            renderComponents(components)
-        }
-    </script>
     <title>Tiger Migration - Focus on Turkish Immigration</title>
     <link rel="stylesheet" href="/css/webfonts.css">
     <link rel="stylesheet" href="/css/comm.css">
+    <link rel="stylesheet" href="/css/header.css">
     <style type="text/tailwindcss">
         @tailwind base;
         @tailwind components;
@@ -92,69 +40,6 @@
             background-image: url("/img/svg/advertisement_lines.svg");
         }
 
-    </style>
-    <style type="text/tailwindcss">
-        .header-container {
-            @apply container h-24 mx-auto grid grid-cols-12;
-            width: 100%;
-        }
-
-        .logo-wrap {
-            @apply col-span-4 flex items-center;
-        }
-
-        .logo-wrap > div {
-            @apply ml-5;
-        }
-
-        #header-nav-list {
-            @apply col-span-6 w-full flex justify-around items-center;
-        }
-
-        #header-nav-list li {
-            @apply relative;
-        }
-
-        #header-nav-list a {
-            @apply text-xl transition-all duration-150;
-            color: var(--color-secondary);
-        }
-
-        #header-nav-list a:hover {
-            color: var(--color-primary);
-        }
-
-        .current-page {
-            color: var(--color-primary) !important;
-        }
-
-        .current-page::after {
-            @apply absolute w-full -bottom-4 left-0 rounded-full h-1;
-            content: "";
-            background-color: var(--color-primary);
-        }
-
-        .language-wrap {
-            @apply col-span-2 relative inline-block;
-        }
-
-        #menu-button {
-            @apply flex justify-end items-center h-full;
-        }
-
-        .logo-text-primary {
-            font-size: 1.5em;
-        }
-
-        .logo-text-secondary {
-            color: var(--color-secondary);
-            font-size: 1em;
-        }
-
-        #dropdown__language {
-            @apply absolute hidden right-0 -bottom-28 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg
-            ring-1 ring-black ring-opacity-5 focus:outline-none transition-all duration-75;
-        }
     </style>
     <style type="text/tailwindcss">
         /*First page content starts here*/
@@ -427,6 +312,11 @@
             @apply w-full justify-start items-start;
         }
 
+        .textarea-bl {
+            @apply absolute bottom-5 right-5;
+            color: var(--color-secondary);
+        }
+
         .img-container {
             @apply relative;
             width: 600px;
@@ -688,12 +578,21 @@
                     <label for="form-email">Email</label>
                     <input id="form-email" type="text" placeholder="Please enter email">
                 </div>
-                <div class="form-input-item">
+                <div class="form-input-item relative">
                     <label for="form-msg">Message</label>
                     <textarea
                         id="form-msg"
+                        maxlength="240"
+                        onchange="this.value=this.value.substring(0, 240)"
+                        onkeydown="this.value=this.value.substring(0, 240)"
+                        onkeyup="this.value=this.value.substring(0, 240)"
+                        oninput="textareaInput()"
+                        onpropertychange="textareaInput()"
                         placeholder="Please leave a message here and we'll be replying as soon as possible."
                     ></textarea>
+                    <div class="textarea-bl" onselectstart="return false;">
+                        <span class="form-msg-limit">0</span>/240
+                    </div>
                 </div>
                 <a href="javascript:void(0)" onclick="submitBtnClick()">
                     <div class="submit">
@@ -721,6 +620,60 @@
         },
 
     });
+</script>
+<script>
+    const components = [
+        {
+            roots: ['#header'],
+            component: header
+        },
+        {
+            roots: ['#footer'],
+            component: footer
+        },
+        {
+            roots: ['#strengths-wrap'],
+            component: advertisement
+        },
+    ]
+
+    /**
+     * textarea input event binding
+     * text words limit
+     * */
+    const textareaInput = () => {
+        const textarea = $("#form-msg")
+        const limitEl = $(".form-msg-limit")
+        const _length = textarea.val().length
+        limitEl.text(_length)
+    }
+
+    /**
+     * Submit button in contact form click event
+     * */
+    const submitBtnClick = () => {
+        const name = $("#form-name").val()
+        const email = $("#form-email").val()
+        const phone = $("#form-phone").val()
+        const message = $("#form-msg").val()
+        let form = {name, email, phone, message}
+        console.log("submit clicked, form data: ", form)
+    }
+
+    /**
+     * dynamic change .intro-text's height depends on #background-homepage's height
+     * */
+    // const introTextHeightAdjustment = () => {
+    //     const introText = $(".intro-text")
+    //     const backgroundHomepage = $("#background-homepage")
+    //     introText.css("height", backgroundHomepage.height())
+    // }
+
+    window.onload = async () => {
+        // introTextHeightAdjustment()
+        lateImages.forEach(imgSelector => lateImg(imgSelector))
+        await renderComponents(components)
+    }
 </script>
 </body>
 </html>

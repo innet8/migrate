@@ -1,8 +1,34 @@
 /**
- * return a html element of navigation bar
- * @return {HTMLElement} the navigation bar
+ * to judge is current page equal to the page name in the param
+ * @param {string} pageName the name of target page, will be compared with current page
+ * @return {boolean} is current page
  * */
-const header = () => {
+const isCurrentPage = (pageName = '') => {
+    /* currentPage will get from window.location.pathname,
+    * and will split by '/' and '.' to get the file name.
+    * */
+    let currentPage = window.location.pathname.split('/').pop().split('.').shift()
+    return currentPage === pageName
+}
+
+/**
+ * Language dropdown menu click event binding.
+ * please call this function after rendering!
+ * */
+const languageDropdownBinding = () => {
+    const languageButton = document.querySelector('#menu-button')
+    const languageMenu = document.querySelector('#dropdown__language')
+    languageButton.addEventListener('click', (e) => {
+        languageMenu.classList.toggle('menu__hidden')
+        languageMenu.classList.toggle('menu__block')
+    })
+}
+
+/**
+ * return a html element of navigation bar
+ * @return {{template: HTMLElement, callback: function}} the navigation bar
+ * */
+function header() {
     const header = document.createElement('header')
     header.classList.add('header-container')
     header.innerHTML = `
@@ -14,10 +40,10 @@ const header = () => {
         </div>
     </div>
     <ul id="header-nav-list">
-        <li><a class="current-page" href="#">Home</a></li>
-        <li><a href="#">Local Conditions</a></li>
-        <li><a href="#">Immigration Services</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a class="${isCurrentPage('index') ? 'current-page' : ''}" href="/index.html">Home</a></li>
+        <li><a class="${isCurrentPage('local') ? 'current-page' : ''}" href="/local.html">Local Conditions</a></li>
+        <li><a class="${isCurrentPage('services') ? 'current-page' : ''}" href="#">Immigration Services</a></li>
+        <li><a class="${isCurrentPage('about') ? 'current-page' : ''}" href="#">About Us</a></li>
     </ul>
     <div class="language-wrap">
         <div class="absolute w-fit h-fit top-1/2 left-1/2 transform -translate-y-1/2">
@@ -31,7 +57,7 @@ const header = () => {
                 </svg>
             </a>
         </div>
-        <div id="dropdown__language" role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
+        <div id="dropdown__language" class="menu__hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
              tabindex="-1">
             <div class="py-1" role="none">
                 <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
@@ -43,8 +69,7 @@ const header = () => {
                    role="menuitem" tabindex="-1" id="menu-item-2">English(United States)</a>
             </div>
         </div>
-
     </div>
     `
-    return header
+    return {template: header, callback: languageDropdownBinding}
 }

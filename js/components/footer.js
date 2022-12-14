@@ -1,8 +1,8 @@
 /**
  * return a html element of footer
- * @return {HTMLElement} the footer
+ * @return {{template: HTMLElement}} the footer
  * */
-const footer = () => {
+function footer() {
     const header = document.createElement('footer')
     header.classList.add('footer-wrap')
     header.innerHTML = `
@@ -10,5 +10,5 @@ const footer = () => {
         ©2022 By Tiger.com All rights reserved.
     </div>
     `
-    return header
+    return {template: header}
 }

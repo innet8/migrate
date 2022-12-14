@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger Migration - Local Conditions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--    Components-->
+    <script src="/js/components/header.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/render.js"></script>
+
+    <link rel="stylesheet" href="/css/webfonts.css">
+    <link rel="stylesheet" href="/css/comm.css">
+    <link rel="stylesheet" href="/css/header.css">
+
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+</head>
+<body>
+<div id="header"></div>
+<div id="main"></div>
+<div id="footer"></div>
+<script>
+    const components = [
+        {
+            roots: ['#header'],
+            component: header
+        },
+        {
+            roots: ['#footer'],
+            component: footer
+        },
+    ]
+
+    window.onload = async () => {
+        // lateImages.forEach(imgSelector => lateImg(imgSelector))
+        await renderComponents(components)
+    }
+</script>
+</body>
+</html>

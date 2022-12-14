@@ -1,8 +1,8 @@
 /**
  * return a html element of advertisement divider
- * @return {HTMLElement} the advertisement
+ * @return {{template: HTMLDivElement}} the advertisement
  * */
-const advertisement = () => {
+function advertisement() {
     const advertisement = document.createElement('div');
   advertisement.classList.add('advertisement')
   advertisement.innerHTML = `
@@ -20,7 +20,5 @@ const advertisement = () => {
         <img src="/img/homepage/dartboard.png" alt class="adv-dartboard">
     </div>
   `
-
-
-  return advertisement
+  return {template: advertisement}
 }
