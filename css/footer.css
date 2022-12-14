@@ -1,0 +1,10 @@
+.footer-wrap {
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-secondary);
+    font-size: 20px;
+    border-top-width: 1px;
+}
