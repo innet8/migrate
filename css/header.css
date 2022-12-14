@@ -9,6 +9,7 @@
 
 .logo-wrap {
     display: flex;
+    justify-content: center;
     align-items: center;
     grid-column: span 4 / auto;
 }

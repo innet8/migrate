@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="/css/webfonts.css">
     <link rel="stylesheet" href="/css/comm.css">
+    <link rel="stylesheet" href="/css/comm_masthead.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/advertisement.css">
@@ -35,50 +36,6 @@
         }
     </style>
     <style type="text/tailwindcss">
-        /*First page content starts here*/
-        #main {
-            @apply clear-both;
-        }
-
-        .masthead {
-            @apply relative w-full;
-            height: fit-content;
-        }
-
-        .background {
-            @apply top-0 transform rounded-3xl mx-auto;
-            width: 95%;
-            height: 400px;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        .intro-text {
-            @apply absolute w-fit h-fit top-1/2 left-1/2 flex flex-col justify-center items-center text-white
-            transform -translate-x-1/2 -translate-y-1/2;
-            z-index: 1;
-            min-width: 500px;
-        }
-
-        .intro-company-name {
-            @apply text-2xl uppercase;
-            font-weight: bold;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .primary-intro {
-            @apply my-5 text-white text-6xl font-medium text-center;
-            line-height: 1.15;
-        }
-
-        .secondary-intro {
-            @apply text-center;
-            font-size: 1.6em;
-        }
-
-        /*First page content ends here*/
         /*Country overview starts here*/
         .section-media {
             position: relative;
@@ -164,8 +121,9 @@
         .info-item {
             @apply rounded-2xl flex flex-row justify-center items-center;
             height: 250px;
+            width: fit-content;
             min-width: 250px;
-            max-width: 600px;
+            max-width: 700px;
             box-shadow: 0 0 15px rgba(159, 159, 159, 0.15);
             transition: all 0.15s ease-in-out;
             border: 1px solid transparent;
@@ -176,7 +134,7 @@
         }
 
         .info-item img {
-            @apply rounded-2xl;
+            @apply rounded-2xl ml-6;
         }
 
         .info-content {
@@ -190,6 +148,7 @@
         .info-text {
             @apply text-base;
             color: var(--color-secondary);
+            width: auto;
         }
         /*Immigration information ends here*/
     </style>

@@ -40,10 +40,18 @@ function header() {
         </div>
     </div>
     <ul id="header-nav-list">
-        <li><a class="${isCurrentPage('index') ? 'current-page' : ''}" href="/index.html">Home</a></li>
-        <li><a class="${isCurrentPage('local') ? 'current-page' : ''}" href="/local.html">Local Conditions</a></li>
-        <li><a class="${isCurrentPage('services') ? 'current-page' : ''}" href="#">Immigration Services</a></li>
-        <li><a class="${isCurrentPage('about') ? 'current-page' : ''}" href="#">About Us</a></li>
+        <li>
+            <a class="${isCurrentPage('index') ? 'current-page' : ''}" href="/index.html">Home</a>
+        </li>
+        <li>
+            <a class="${isCurrentPage('local') ? 'current-page' : ''}" href="/local.html">Local Conditions</a>
+        </li>
+        <li>
+            <a class="${isCurrentPage('services') ? 'current-page' : ''}" href="/services.html">Immigration Services</a>
+        </li>
+        <li>
+            <a class="${isCurrentPage('about') ? 'current-page' : ''}" href="#">About Us</a>
+        </li>
     </ul>
     <div class="language-wrap">
         <div class="absolute w-fit h-fit top-1/2 left-1/2 transform -translate-y-1/2">

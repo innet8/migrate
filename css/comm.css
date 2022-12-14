@@ -10,6 +10,10 @@ body{
     font-family: "HarmonyOS Sans", -apple-system, serif;
 }
 
+.w-800 {
+    width: 800px;
+}
+
 .orange-underline {
     position: relative;
     width: fit-content;
