@@ -27,6 +27,19 @@ function deepSearch(obj, key) {
 }
 
 /**
+ * @description get current language, if fallback, set localStorage = fallbackLang
+ * @return {string} lang
+ * */
+function getLang () {
+    const currentLang = localStorage.getItem('lang')
+    if (!currentLang) {
+        localStorage.setItem('lang', this.fallbackLang)
+        return this.fallbackLang
+    }
+    return currentLang
+}
+
+/**
  * @description returns the translation of a string,
  * get translations from json file, data structure of json:
  *      {
@@ -120,7 +133,7 @@ const SimI18n = function (options = {
     //Factory
     let simI18n = {}
     simI18n.languageJson = {}
-    simI18n.lang = options.lang || 'en_US'
+    simI18n.lang = options.lang || getLang()
     simI18n.fallbackLang = options.fallbackLang || 'en_US'
     simI18n.translations = options.translations || {}
 
@@ -128,18 +141,17 @@ const SimI18n = function (options = {
         throw new Error('The language is not supported.')
     }
 
+    /**
+     * @description language switch, languages: zh_Hans, en_US
+     * @param {string} lang language code
+     * */
     simI18n.setLang = function (lang) {
         localStorage.setItem('lang', lang)
         this.lang = lang
+        window.location.reload()
     }
-    simI18n.getLang = function () {
-        const currentLang = localStorage.getItem('lang')
-        if (!currentLang) {
-            localStorage.setItem('lang', this.fallbackLang)
-            return this.fallbackLang
-        }
-        return currentLang
-    }
+
+    simI18n.getLang = getLang()
 
     simI18n.getLocalizedLang = function () {
         return this.languageJson?.localizedLanguage || this.getLang()
