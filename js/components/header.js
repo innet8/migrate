@@ -73,13 +73,12 @@ function header() {
         </div>
         <div id="dropdown__language" class="menu__hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
              tabindex="-1">
-            <div class="py-1" role="none">
-                <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-                <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-100 block px-4 py-2 text-sm"
+            <div class="menu-links" role="none">
+                <a href="#" class="menu-link"
                    role="menuitem" tabindex="-1" id="menu-item-0">Turkish</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-100 block px-4 py-2 text-sm"
+                <a href="#" class="menu-link"
                    role="menuitem" tabindex="-1" id="menu-item-1">Chinese(Traditional)</a>
-                <a href="#" class="text-gray-700 hover:text-gray-900 hover:bg-gray-100 block px-4 py-2 text-sm"
+                <a href="#" class="menu-link"
                    role="menuitem" tabindex="-1" id="menu-item-2">English(United States)</a>
             </div>
         </div>
