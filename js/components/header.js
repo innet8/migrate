@@ -47,7 +47,13 @@ function header() {
     </div>
     <ul id="header-nav-list">
         <li>
-            <a class="${isCurrentPage(['index', '']) ? 'current-page' : ''}" href="/index.html">Home</a>
+            <a 
+            class="${isCurrentPage(['index', '']) ? 'current-page' : ''}" 
+            href="/index.html" 
+            data-i18n="header.index"
+            >
+            Home
+            </a>
         </li>
         <li>
             <a class="${isCurrentPage('local') ? 'current-page' : ''}" href="/local.html">Local Conditions</a>
@@ -79,7 +85,7 @@ function header() {
                 <a href="#" class="menu-link"
                    role="menuitem" tabindex="-1" id="menu-item-1">Chinese(Traditional)</a>
                 <a href="#" class="menu-link"
-                   role="menuitem" tabindex="-1" id="menu-item-2">English(United States)</a>
+                   role="menuitem" tabindex="-1" id="menu-item-2" data-i18n="header.English">English(United States)</a>
             </div>
         </div>
     </div>

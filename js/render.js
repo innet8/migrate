@@ -13,7 +13,7 @@ function render(roots, template) {
  * each component has a array for target nodes.
  * @param {Array} componentsList
  * */
-const renderComponents = (componentsList) => {
+const renderPage = (componentsList) => {
     /*
     * Data structure of componentsList:
     * [{

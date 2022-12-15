@@ -1,0 +1,29 @@
+{
+  "language": "en_US",
+  "titles": {
+    "index": "Tiger Migration - Focus on Turkish Immigration",
+    "local": "Tiger Migration - Local Conditions",
+    "services": "Tiger Migration - Immigration Services",
+    "about": "Tiger Migration - About Us"
+  },
+  "description": "Tiger Technology, a one-stop integrated cross-border service provider with a focus on Turkish immigration services, is a global service provider.",
+  "keyword": "",
+  "translations": {
+    "header": {
+      "logo": "Tiger Migration",
+      "logoDesc": "Professional·Focus on Turkish Immigration",
+      "index": "Home",
+      "local": "Local Conditions",
+      "services": "Services",
+      "about": "About Us",
+      "Turkish": "Turkish",
+      "English": "English (United States)",
+      "sChinese": "Chinese (Simplified)",
+      "tChinese": "Chinese (Traditional)"
+    },
+    "index": {
+      "title": "Home Page",
+      "description": "This is the home page"
+    }
+  }
+}

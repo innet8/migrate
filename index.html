@@ -18,6 +18,9 @@
     <meta name="keywords" lang="zh_CN" content="移民,购房,定居" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Simple i18n -->
+    <script src="/js/simpleI18n/simpleI18n.js"></script>
+
     <!--    Components-->
     <script src="/js/components/header.js"></script>
     <script src="/js/components/footer.js"></script>
@@ -25,7 +28,8 @@
     <script src="/js/components/form.js"></script>
     <script src="/js/render.js"></script>
 
-    <script src="/js/jquery-3.6.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js"></script>
+
     <script src="/js/lateImg.js"></script>
 
     <link
@@ -515,7 +519,18 @@
     window.onload = async () => {
         // introTextHeightAdjustment()
         lateImages.forEach(imgSelector => lateImg(imgSelector))
-        await renderComponents(components)
+        await renderPage(components)
+
+        const simI18n = new SimI18n({
+            lang: 'en_US',
+            fallbackLang: 'en_US',
+            translations: {
+                en_US: '/js/simpleI18n/langs/en.json'
+            }
+        })
+
+        simI18n.init()
+        console.log(simI18n.languageJson)
     }
 </script>
 </body>
