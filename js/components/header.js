@@ -1,21 +1,27 @@
+let currentPage = window.location.pathname.split('/').pop().split('.').shift()
 /**
  * to judge is current page equal to the page name in the param
- * @param {string} pageName the name of target page, will be compared with current page
+ * @param {string | Array} pageName the name of target page, will be compared with current page
  * @return {boolean} is current page
  * */
-const isCurrentPage = (pageName = '') => {
+function isCurrentPage(pageName = '') {
     /* currentPage will get from window.location.pathname,
     * and will split by '/' and '.' to get the file name.
     * */
-    let currentPage = window.location.pathname.split('/').pop().split('.').shift()
-    return currentPage === pageName
+    if (typeof pageName === 'string') {
+        return pageName === currentPage
+    }
+    if (typeof pageName === 'object') {
+        return pageName.includes(currentPage)
+    }
+    return false
 }
 
 /**
  * Language dropdown menu click event binding.
  * please call this function after rendering!
  * */
-const languageDropdownBinding = () => {
+function languageDropdownBinding () {
     const languageButton = document.querySelector('#menu-button')
     const languageMenu = document.querySelector('#dropdown__language')
     languageButton.addEventListener('click', (e) => {
@@ -41,7 +47,7 @@ function header() {
     </div>
     <ul id="header-nav-list">
         <li>
-            <a class="${isCurrentPage('index') ? 'current-page' : ''}" href="/index.html">Home</a>
+            <a class="${isCurrentPage(['index', '']) ? 'current-page' : ''}" href="/index.html">Home</a>
         </li>
         <li>
             <a class="${isCurrentPage('local') ? 'current-page' : ''}" href="/local.html">Local Conditions</a>
@@ -50,7 +56,7 @@ function header() {
             <a class="${isCurrentPage('services') ? 'current-page' : ''}" href="/services.html">Immigration Services</a>
         </li>
         <li>
-            <a class="${isCurrentPage('about') ? 'current-page' : ''}" href="#">About Us</a>
+            <a class="${isCurrentPage('about') ? 'current-page' : ''}" href="/about.html">About Us</a>
         </li>
     </ul>
     <div class="language-wrap">

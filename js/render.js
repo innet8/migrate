@@ -1,7 +1,7 @@
 /**
  * render components in array 'components' to nodes in its' roots
  * */
-const render = (roots, template) => {
+function render(roots, template) {
     roots.forEach(root => {
         const rootElement = document.querySelector(root)
         rootElement.appendChild(template)
@@ -28,7 +28,7 @@ const renderComponents = (componentsList) => {
     * */
     componentsList.forEach(item => {
         render(item.roots, item.component().template)
-        if (item.component()?.callback && typeof item.component()?.callback === 'function') {
+        if (item.component()?.callback) {
             item?.component()?.callback()
         }
     })

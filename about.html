@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+            name="description"
+            lang="en"
+            content="Tiger Technology, a one-stop integrated cross-border service provider with a
+        focus on Turkish immigration services, is a global service provider."
+    />
+    <meta
+            name="description"
+            lang="zh_CN"
+            content="老虎科技,以土耳其移民服务为主的一站式综合跨境服务机构,面向全球服务."
+    />
+    <meta name="keywords" lang="en" content="UZAQ,Noodles,delicious,tasty"/>
+    <meta name="keywords" lang="zh_CN" content="移民,购房,定居"/>
+
+    <title>Tiger Migration - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--    Components-->
+    <script src="/js/components/header.js"></script>
+    <script src="/js/components/footer.js"></script>
+    <script src="/js/render.js"></script>
+
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="/css/webfonts.css">
+    <link rel="stylesheet" href="/css/comm.css">
+    <link rel="stylesheet" href="/css/comm_masthead.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <style type="text/tailwindcss">
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+    </style>
+    <style type="text/tailwindcss">
+        .company-wrap {
+            padding: 140px 0;
+        }
+
+        .company-profile {
+            @apply grid grid-cols-1 lg:grid-cols-2;
+            width: 1200px;
+        }
+
+        .company-profile > div {
+            position: relative;
+        }
+
+        .profile-title {
+            @apply text-left;
+            font-size: 3rem; /* 48px */
+            line-height: 1.15;
+        }
+
+        .profile-title-wrap {
+            margin-bottom: 3rem;
+        }
+
+        .profile-intro {
+            @apply text-left text-base;
+            width: 550px;
+        }
+
+        .profile-intro > p {
+            margin-bottom: 1rem; /* 16px */
+        }
+
+        .profile-right {
+            @apply flex flex-row justify-evenly;
+            width: 525px;
+            height: 600px;
+        }
+
+        .profile-img {
+            object-fit: cover;
+        }
+
+        #profile-img-1 {
+            @apply self-start;
+            width: 220px;
+        }
+
+        #profile-img-2 {
+            @apply self-center;
+            width: 220px;
+        }
+
+        .profile-card {
+            width: 400px;
+            bottom: 0;
+            left: 0;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .float-card-text {
+            padding: 0 1rem;
+            width: 280px;
+        }
+
+        .map-wrap {
+            position: relative;
+            width: 100%;
+            height: 620px; /* h = map.height + 140px */
+        }
+
+        .map {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            background-image: url("/img/about/bg_map.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .map:before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            width: 29px;
+            height: 48px;
+            background-image: url("/img/svg/ico_location_3.svg");
+            transform: translate(-32.5%, -102.5%);
+            z-index: 2;
+        }
+        .vertical-icons {
+            background-color: var(--color-primary);
+            color: white;
+        }
+        .vertical-icon__text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vertical-icon__text-title {
+            font-size: 1.25rem; /* 20px */
+            margin-bottom: 0.75rem; /* 12px */
+            font-weight: 400;
+        }
+
+        .vertical-icon__text-desc {
+            font-size: 1rem; /* 16px */
+            line-height: 1.5rem; /* 24px */
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+<div id="header"></div>
+<div id="main">
+    <div class="masthead">
+        <img src="/img/about/bg_about.png" alt class="background" id="background-homepage">
+        <div class="intro-text">
+            <div class="half-opacity-tag intro-company-name rounded-full">Tiger</div>
+            <div class="primary-intro">
+                <p>About Us</p>
+            </div>
+            <div class="secondary-intro">
+                <p>Set industry service standards and customize the most suitable immigration solutions</p>
+            </div>
+        </div>
+    </div>
+    <div class="company-wrap section-wrap">
+        <div class="company-profile">
+            <div class="profile-left">
+                <div class="section-contents">
+                    <div class="profile-title-wrap section-title-wrap__left section-title-wrap">
+                        <div class="half-opacity-tag section-top rounded-full">Company Profile</div>
+                        <div class="profile-title section-title">Tiger Technology and Real Estate Investment Co.</div>
+                    </div>
+                    <div class="profile-intro section-intro">
+                        <p style="color: black;">
+                            Tiger Technology and Real Estate Investment Co., Ltd. is a one-stop comprehensive
+                            cross-border service provider focusing on Turkish immigration services, headquartered in
+                            Istanbul, Turkey, with global services.
+                        </p>
+                        <p>
+                            Tiger Technology has always been committed to providing the global elite with "unhindered
+                            and worry-free settlement" solutions. From children's overseas education, investment and
+                            property purchase to overseas identity planning, Tiger Technology has been investing in the
+                            field of overseas settlement and global business layout to provide a bridge to the world for
+                            people who want to realize their global dreams.
+                        </p>
+                        <p>
+                            Tiger Technology puts itself in the shoes of its customers and sets industry service
+                            standards through model and product innovation, and is committed to customizing the most
+                            appropriate immigration solutions for tens of thousands of users.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-right">
+                <div class="profile-img" id="profile-img-1">
+                    <img src="/img/about/img_profile_1.png" height="540" width="272" alt>
+                </div>
+                <div class="profile-img" id="profile-img-2">
+                    <img src="img/about/img_profile_2.png" height="462" width="252" alt>
+                </div>
+                <div class="profile-card section-media-float-card">
+                    <div class="float-card-img">
+                        <img src="/img/svg/ico_flag.svg" alt>
+                    </div>
+                    <div class="float-card-text">
+                        <h1 class="float-card-quote">“Unimpeded travel and worry-free settlement”</h1>
+                        <div class="float-card-name">
+                            <span>Tiger Technology</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map-wrap">
+        <div class="map"></div>
+        <div class="vertical-icons">
+            <div class="vertical-icon">
+                <img src="/img/svg/ico_phone_ringing.svg" alt class="vertical-icon__img">
+                <div class="vertical-icon__text">
+                    <p class="vertical-icon__text-title">Contact Number</p>
+                    <p class="vertical-icon__text-desc">
+                        +90 551 995 5905
+                    </p>
+                    <p class="vertical-icon__text-desc">
+                        +90 (212) 916 25 88
+                    </p>
+                </div>
+            </div>
+            <div class="vertical-icon__divider"></div>
+            <div class="vertical-icon">
+                <img src="/img/svg/ico_email.svg" alt class="vertical-icon__img">
+                <div class="vertical-icon__text">
+                    <p class="vertical-icon__text-title">Email</p>
+                    <p class="vertical-icon__text-desc">
+                        bussiness@sarzla.com
+                    </p>
+                </div>
+            </div>
+            <div class="vertical-icon__divider"></div>
+            <div class="vertical-icon">
+                <img src="/img/svg/ico_addr.svg" alt class="vertical-icon__img">
+                <div class="vertical-icon__text">
+                    <p class="vertical-icon__text-title">Company Address</p>
+                    <p class="vertical-icon__text-desc">
+                        ZİYA GÖKALP MAH. SÜLEYMAN DEMİREL BLV.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+
+<script>
+    const components = [
+        {
+            roots: ['#header'],
+            component: header
+        },
+        {
+            roots: ['#footer'],
+            component: footer
+        },
+    ]
+
+    window.onload = async () => {
+        // lateImages.forEach(imgSelector => lateImg(imgSelector))
+        await renderComponents(components)
+    }
+</script>
+</body>
+</html>

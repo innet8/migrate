@@ -23,6 +23,7 @@
     <!--    Components-->
     <script src="/js/components/header.js"></script>
     <script src="/js/components/footer.js"></script>
+    <script src="/js/components/form.js"></script>
     <script src="/js/render.js"></script>
 
     <link
@@ -36,6 +37,7 @@
     <link rel="stylesheet" href="/css/comm_masthead.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/form.css">
 
     <style type="text/tailwindcss">
         @tailwind base;
@@ -75,47 +77,16 @@
             z-index: 1;
         }
 
-        .purchase-desc {
-            @apply absolute bg-white grid grid-cols-3;
+        .purchase-card {
             right: -12.5%;
             bottom: 0;
-            box-shadow: 0 4px 30px rgba(159, 159, 159, 0.3);
-            border-radius: 0 8px 8px 8px;
         }
 
-        .purchase-desc:before {
-            @apply absolute;
-            content: "";
+        .purchase-card:before {
             background-color: var(--color-card-background);
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 50%;
-            transform: translateY(-50%);
-            z-index: 2;
         }
 
-        .desc-img {
-            @apply relative flex justify-center items-center;
-            width: 120px;
-            height: 120px;
-            background-color: var(--color-primary);
-            z-index: 5;
-            border-radius: 0 0 0 8px;
-        }
-
-        .desc-text {
-            @apply h-full relative col-span-2 pl-8 bg-white flex flex-col justify-center;
-            z-index: 5;
-            border-radius: 0 8px 8px 8px;
-        }
-
-        .desc-addr {
-            @apply text-sm;
-            color: var(--color-secondary);
-        }
-
-        .section-contents {
+        .purchase-contents {
             @apply relative mr-0 ml-24;
         }
 
@@ -144,7 +115,6 @@
         /*    right: 0;*/
         /*    background-color: var(--color-secondary);*/
         /*}*/
-
 
         .swiper {
             /*max-width: 1920px;*/
@@ -242,8 +212,71 @@
             @apply text-base;
             color: var(--color-secondary);
         }
-
         /* Economic strength ends here */
+        /* Passport starts here */
+        .passport-wrap {
+            padding: 120px 0 120px;
+            flex-direction: column;
+        }
+        .passport-section {
+            @apply grid grid-cols-1 lg:flex flex-row rounded-2xl bg-white overflow-hidden;
+            width: 1200px;
+            box-shadow: 0 0 15px rgba(159, 159, 159, 0.15);
+        }
+        .passport-contents {
+            @apply px-11 py-12;
+        }
+        .passport-intro__left {
+            @apply text-base text-left;
+        }
+        .passport-intro__right {
+            @apply text-xl text-left;
+        }
+        .passport-title {
+            margin-bottom: 3rem; /* 48px */
+            text-align: left;
+            font-size: 3rem; /* 48px */
+            line-height: 1.15;
+        }
+        .intro-title {
+            @apply text-3xl text-black mb-6;
+        }
+        .passport-process-wrap {
+            @apply relative flex flex-row justify-center items-center;
+            background-color: var(--passport-process-wrap);
+            width: fit-content;
+            max-width: 600px;
+        }
+        .passport-process-wrap:after {
+            @apply absolute;
+            content: "";
+            background-image: url("/img/svg/bg_passport.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 250px;
+            height: 250px;
+            opacity: .15;
+            top: 0;
+            right: 0;
+            transform: translate(-15%, 15%);
+            z-index: 1;
+        }
+        .passport-process {
+            @apply relative mx-12 my-14;
+            height: fit-content;
+            min-width: 500px;
+        }
+        .passport-process .section-intro {
+            position: relative;
+            z-index: 5;
+        }
+        .passport-process li {
+            margin-bottom: 1rem; /* 16px */
+        }
+        .passport-process li > span {
+            margin-right: .5em;
+        }
+        /* Passport ends here */
     </style>
 </head>
 <body>
@@ -310,17 +343,17 @@
         <div class="flex flex-row">
             <div class="section-media">
                 <img class="purchase-img" src="/img/services/bg_purchase.png" alt>
-                <div class="purchase-desc">
-                    <div class="desc-img">
+                <div class="purchase-card section-media-float-card">
+                    <div class="float-card-img">
                         <img src="/img/svg/ico_location_2.svg" alt>
                     </div>
-                    <div class="desc-text">
+                    <div class="float-card-text">
                         <h1 class="text-3xl font-bold">Mesa Avenue</h1>
-                        <span class="desc-addr">Property Address</span>
+                        <span class="float-card-addr">Property Address</span>
                     </div>
                 </div>
             </div>
-            <div class="section-contents">
+            <div class="purchase-contents section-contents">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -385,7 +418,7 @@
         </div>
     </div>
     <div class="economic-section section-wrap">
-        <div class="section-contents" id="country-overview">
+        <div class="section-contents">
             <div class="section-title-wrap__left section-title-wrap">
                 <div class="half-opacity-tag section-top rounded-full">Strength</div>
                 <div class="section-title text-left">Turkish economic strength</div>
@@ -408,6 +441,67 @@
                     Istanbul Airport is one of the busiest airports in Europe.
                     Turkey's total tourism revenue climbs 103% in 2021 reaching $24.482 billion
                 </p>
+            </div>
+        </div>
+    </div>
+    <div class="passport-wrap section-wrap gap-section">
+        <div class="passport-section">
+            <div class="passport-contents section-contents">
+                <div class="section-title-wrap__left section-title-wrap">
+                    <div class="half-opacity-tag section-top rounded-full">You need</div>
+                    <div class="passport-title section-title text-left mb-12">How to apply for a Turkish passport?</div>
+                    <div class="passport-intro__left section-intro">
+                        <h1 class="intro-title">
+                            Application requirements
+                        </h1>
+                        <ol>
+                            <li>
+                                1. The applicant is at least 18 years old (spouse and children under 18 years old can apply with the applicant).
+                            </li>
+                            <li>
+                                2. Purchase 400,000 USD property in Turkey.
+                            </li>
+                            <li>
+                                3. The property can be sold after three years without affecting the status
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="passport-process-wrap">
+                <div class="passport-process">
+                    <div class="passport-intro__right section-intro">
+                        <h1 class="intro-title">
+                            Immigration Process
+                        </h1>
+                        <ol>
+                            <li>
+                                <span class="orange">❶</span>
+                                Consultation to determine the willingness to invest and authorize the lawyer to handle immigration-related procedures
+                            </li>
+                            <li>
+                                <span class="orange">❷</span>
+                                Successful selection (you can come to see the house on site or video viewing), you need to pay a deposit for the purchase of the house
+                            </li>
+                            <li>
+                                <span class="orange">❸</span>
+                                Open an account and pay the balance of the house price to the real estate company
+                            </li>
+                            <li>
+                                <span class="orange">❹</span>
+                                Go through the property transfer process and apply for an appraisal report
+                            </li>
+                            <li>
+                                <span class="orange">❺</span>
+                                Successful transfer of property and submission of application for Turkish residence card
+                            </li>
+                            <li style="margin-bottom: 0;">
+                                <span class="orange">❻</span>
+                                Submit information and apply for naturalization
+                            </li>
+                        </ol>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -441,6 +535,10 @@
         {
             roots: ['#footer'],
             component: footer
+        },
+        {
+            roots: ['#main'],
+            component: form
         },
     ]
 
