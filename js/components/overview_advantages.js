@@ -1,10 +1,8 @@
 const advList = [
-    'Once the center of the Roman, Byzantine and Ottoman Empires,' +
-    'it has a long history of 6,500 years and a heritage of thirteen different civilizations'
-    , 'Surrounded by sea on three sides and complicated inland,' +
-    'it has an extremely favorable strategic position and extremely rich natural resources'
-    , 'It is a modern country with advanced social service facilities and hospitable people'
-    , 'The culture is splendid, the scenery is fascinating, and there are many mysterious legends'
+    'overview-advantages.adv-1',
+    'overview-advantages.adv-2',
+    'overview-advantages.adv-3',
+    'overview-advantages.adv-4'
 ]
 
 const advantage = (text = '') => {
@@ -12,9 +10,7 @@ const advantage = (text = '') => {
     advantage.classList.add('overview-advantage')
     advantage.innerHTML = `
         <img src="/img/svg/advantage_4.svg" alt width="20" height="20">
-        <p>
-            ${text}
-        </p>
+        <p data-i18n="${text}"></p>
     `
     return advantage
 }

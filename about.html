@@ -20,12 +20,13 @@
     <title>Tiger Migration - About Us</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Simple i18n -->
+    <script src="/js/simpleI18n/simpleI18n.js"></script>
+
     <!--    Components-->
     <script src="/js/components/header.js"></script>
     <script src="/js/components/footer.js"></script>
     <script src="/js/render.js"></script>
-
-
 
     <link
             rel="stylesheet"
@@ -278,6 +279,16 @@
     window.onload = async () => {
         // lateImages.forEach(imgSelector => lateImg(imgSelector))
         await renderPage(components)
+
+        const simI18n = new SimI18n({
+            lang: 'en_US',
+            fallbackLang: 'en_US',
+            translations: {
+                en_US: '/js/simpleI18n/langs/en.json'
+            }
+        })
+
+        simI18n.init()
     }
 </script>
 </body>

@@ -20,14 +20,15 @@
     <title>Tiger Migration - Local Conditions</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Simple i18n -->
+    <script src="/js/simpleI18n/simpleI18n.js"></script>
+
     <!--    Components-->
     <script src="/js/components/header.js"></script>
     <script src="/js/components/footer.js"></script>
     <script src="/js/components/advertisement.js"></script>
     <script src="/js/components/overview_advantages.js"></script>
     <script src="/js/render.js"></script>
-
-
 
     <link rel="stylesheet" href="/css/webfonts.css">
     <link rel="stylesheet" href="/css/comm.css">
@@ -169,13 +170,13 @@
     <div class="masthead">
         <img src="/img/local/bg_local.png" alt class="background" id="background-homepage">
         <div class="intro-text">
-            <div class="half-opacity-tag intro-company-name rounded-full">Multi-country Visa Waiver</div>
+            <div class="half-opacity-tag intro-company-name rounded-full" data-i18n="local.masthead.tag">Multi-country Visa Waiver</div>
             <div class="primary-intro">
-                <p>Turkish passport investment</p>
+                <p data-i18n="local.masthead.title">Turkish passport investment</p>
             </div>
             <div class="secondary-intro">
-                <p>Visa-free access to more than 110 countries and regions,</p>
-                <p>fast approval of Turkish passport</p>
+                <p data-i18n="local.masthead.intro-1">Visa-free access to more than 110 countries and regions,</p>
+                <p data-i18n="local.masthead.intro-2">fast approval of Turkish passport</p>
             </div>
         </div>
     </div>
@@ -188,9 +189,9 @@
         </div>
         <div class="section-contents" id="country-overview">
             <div class="section-title-wrap__left section-title-wrap">
-                <div class="half-opacity-tag section-top rounded-full">About Turkey</div>
-                <div class="section-title text-left">Country Overview</div>
-                <div class="section-intro text-left">
+                <div class="half-opacity-tag section-top rounded-full" data-i18n="local.overview.tag">About Turkey</div>
+                <div class="section-title text-left" data-i18n="local.overview.title">Country Overview</div>
+                <div class="section-intro text-left" data-i18n="local.overview.desc">
                     Turkey is a magical country that straddles the Eurasian continent and
                     is known as the "cradle of civilization".
                 </div>
@@ -199,17 +200,17 @@
     </div>
     <div class="section-wrap gap-section" id="immi-info-wrap">
         <div class="section-title-wrap">
-            <div class="half-opacity-tag section-top rounded-full">Your attention</div>
-            <div class="section-title text-left">Immigration Information</div>
+            <div class="half-opacity-tag section-top rounded-full" data-i18n="local.immiInfo.tag">Your attention</div>
+            <div class="section-title text-left" data-i18n="local.immiInfo.title">Immigration Information</div>
         </div>
         <div class="info-grid">
             <div class="info-item">
                 <img src="/img/local/info_med.png" alt width="180" height="180">
                 <div class="info-content">
-                    <h1 class="info-title">
+                    <h1 class="info-title" data-i18n="local.immiInfo.infos.info-1.title">
                         Medical Resources
                     </h1>
-                    <p class="info-text">
+                    <p class="info-text" data-i18n="local.immiInfo.infos.info-1.desc">
                         Health care services in Turkey are provided by public and private health care institutions. Under this system, all residents registered with the Social Security Institution can receive free medical treatment at hospitals contracted with SGK.
                     </p>
                 </div>
@@ -217,10 +218,10 @@
             <div class="info-item">
                 <img src="/img/local/info_scene.png" alt width="180" height="180">
                 <div class="info-content">
-                    <h1 class="info-title">
+                    <h1 class="info-title" data-i18n="local.immiInfo.infos.info-2.title">
                         Beautiful Scenery
                     </h1>
-                    <p class="info-text">
+                    <p class="info-text" data-i18n="local.immiInfo.infos.info-2.desc">
                         Surrounded by sea on three sides, Turkey has 7,200 km of coastline and 1,500 hot springs, ranking 7th in the world and 1st in Europe; with the global Blue Flag beaches selected in 2021, Turkey's total number of Blue Flag beaches reaches 519,3rd in the world.
                     </p>
                 </div>
@@ -228,10 +229,10 @@
             <div class="info-item">
                 <img src="/img/local/info_climate.png" alt width="180" height="180">
                 <div class="info-content">
-                    <h1 class="info-title">
+                    <h1 class="info-title" data-i18n="local.immiInfo.infos.info-3.title">
                         Country Climate
                     </h1>
-                    <p class="info-text">
+                    <p class="info-text" data-i18n="local.immiInfo.infos.info-3.desc">
                         With its mild climate and varied landscapes, from coastal plains to mountain pastures, from cedar forests to open grasslands, Turkey is one of the richest countries in the world in terms of plant species.
                     </p>
                 </div>
@@ -239,10 +240,10 @@
             <div class="info-item">
                 <img src="/img/local/info_eco.png" alt width="180" height="180">
                 <div class="info-content">
-                    <h1 class="info-title">
+                    <h1 class="info-title" data-i18n="local.immiInfo.infos.info-4.title">
                         Investment Economics
                     </h1>
-                    <p class="info-text">
+                    <p class="info-text" data-i18n="local.immiInfo.infos.info-4.desc">
                         Turkey's real estate sector has seen tremendous growth in the past 10 years. Data shows that Turkey ranks sixth in the world in terms of annual price growth index, with an annual growth rate of over 11%, even higher than Australia and Canada.
                     </p>
                 </div>
@@ -274,6 +275,16 @@
     window.onload = async () => {
         // lateImages.forEach(imgSelector => lateImg(imgSelector))
         await renderPage(components)
+
+        const simI18n = new SimI18n({
+            lang: 'en_US',
+            fallbackLang: 'en_US',
+            translations: {
+                en_US: '/js/simpleI18n/langs/en.json'
+            }
+        })
+
+        simI18n.init()
     }
 </script>
 </body>

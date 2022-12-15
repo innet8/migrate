@@ -31,6 +31,15 @@ function languageDropdownBinding () {
 }
 
 /**
+ * @description language switch, languages: zh_Hans, zh_Hant, en_US
+ * @param {string} lang language code
+ * */
+function changeLang(lang) {
+    localStorage.setItem('lang', lang)
+    window.location.reload()
+}
+
+/**
  * return a html element of navigation bar
  * @return {{template: HTMLElement, callback: function}} the navigation bar
  * */
@@ -48,27 +57,45 @@ function header() {
     <ul id="header-nav-list">
         <li>
             <a 
-            class="${isCurrentPage(['index', '']) ? 'current-page' : ''}" 
-            href="/index.html" 
-            data-i18n="header.index"
+                class="${isCurrentPage(['index', '']) ? 'current-page' : ''}" 
+                href="/index.html" 
+                data-i18n="header.index"
             >
-            Home
+                Home
             </a>
         </li>
         <li>
-            <a class="${isCurrentPage('local') ? 'current-page' : ''}" href="/local.html">Local Conditions</a>
+            <a 
+                class="${isCurrentPage('local') ? 'current-page' : ''}" 
+                href="/local.html"
+                data-i18n="header.local"
+            >
+                Local Conditions
+            </a>
         </li>
         <li>
-            <a class="${isCurrentPage('services') ? 'current-page' : ''}" href="/services.html">Immigration Services</a>
+            <a 
+                class="${isCurrentPage('services') ? 'current-page' : ''}" 
+                href="/services.html"
+                data-i18n="header.services"
+            >
+                Immigration Services
+            </a>
         </li>
         <li>
-            <a class="${isCurrentPage('about') ? 'current-page' : ''}" href="/about.html">About Us</a>
+            <a 
+                class="${isCurrentPage('about') ? 'current-page' : ''}" 
+                href="/about.html"
+                data-i18n="header.about"
+            >
+                About Us
+            </a>
         </li>
     </ul>
     <div class="language-wrap">
         <div class="absolute w-fit h-fit top-1/2 left-1/2 transform -translate-y-1/2">
             <a href="javascript:void(0)" id="menu-button" aria-expanded="true" aria-haspopup="true">
-                English
+                <span data-i18n="getLang"></span>
                 <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                      fill="currentColor" aria-hidden="true">
                     <path fill-rule="evenodd"
@@ -80,11 +107,11 @@ function header() {
         <div id="dropdown__language" class="menu__hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
              tabindex="-1">
             <div class="menu-links" role="none">
-                <a href="#" class="menu-link"
-                   role="menuitem" tabindex="-1" id="menu-item-0">Turkish</a>
-                <a href="#" class="menu-link"
-                   role="menuitem" tabindex="-1" id="menu-item-1">Chinese(Traditional)</a>
-                <a href="#" class="menu-link"
+                <a href="javascript:void(0)" class="menu-link" onclick="changeLang('zh_Hans')"
+                   role="menuitem" tabindex="-1" id="menu-item-1" data-i18n="header.sChinese">Chinese(Simplified)</a>
+                <a href="javascript:void(0)" class="menu-link" onclick="changeLang('zh_Hant')"
+                   role="menuitem" tabindex="-1" id="menu-item-1" data-i18n="header.tChinese">Chinese(Traditional)</a>
+                <a href="javascript:void(0)" class="menu-link" onclick="changeLang('en_US')"
                    role="menuitem" tabindex="-1" id="menu-item-2" data-i18n="header.English">English(United States)</a>
             </div>
         </div>

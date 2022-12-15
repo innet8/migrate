@@ -1,5 +1,6 @@
 {
   "language": "en_US",
+  "localizedLanguage": "English (US)",
   "titles": {
     "index": "Tiger Migration - Focus on Turkish Immigration",
     "local": "Tiger Migration - Local Conditions",
@@ -9,6 +10,7 @@
   "description": "Tiger Technology, a one-stop integrated cross-border service provider with a focus on Turkish immigration services, is a global service provider.",
   "keyword": "",
   "translations": {
+    "getLang": "getLang",
     "header": {
       "logo": "Tiger Migration",
       "logoDesc": "Professional·Focus on Turkish Immigration",
@@ -16,14 +18,138 @@
       "local": "Local Conditions",
       "services": "Services",
       "about": "About Us",
-      "Turkish": "Turkish",
       "English": "English (United States)",
       "sChinese": "Chinese (Simplified)",
       "tChinese": "Chinese (Traditional)"
     },
+    "footer": {
+      "copyrights": "©2022 By Tiger.com All rights reserved."
+    },
+    "advertisement-1": {
+      "head": "Tiger Migration",
+      "title": "Focus on Turkish Immigration",
+      "tags": {
+        "tag-1": "Midland Direct",
+        "tag-2": "Conscientious Service",
+        "tag-3": "Success Guarantee"
+      }
+    },
+    "callForm": {
+      "tag": "Call to Action",
+      "title": "Fill out the purchase request",
+      "desc": "Online Matching of Desired Properties",
+      "name": "Your Name",
+      "namePlaceholder": "Please enter your name",
+      "phone": "Contact Number",
+      "phonePlaceholder": "Please enter contact number",
+      "email": "Email",
+      "emailPlaceholder": "Please enter email",
+      "message": "Message",
+      "messagePlaceholder": "Please leave a message here and we'll be replying as soon as possible.",
+      "submit": "Submit"
+    },
+    "overview-advantages": {
+      "adv-1": "Once the center of the Roman, Byzantine and Ottoman Empires, it has a long history of 6,500 years and a heritage of thirteen different civilizations",
+      "adv-2": "Surrounded by sea on three sides and complicated inland, it has an extremely favorable strategic position and extremely rich natural resources",
+      "adv-3": "It is a modern country with advanced social service facilities and hospitable people",
+      "adv-4": "The culture is splendid, the scenery is fascinating, and there are many mysterious legends"
+    },
     "index": {
-      "title": "Home Page",
-      "description": "This is the home page"
-    }
+      "masthead": {
+        "tag": "Tiger Migration",
+        "title": "Turkish passport investment",
+        "subtitle": "(home purchase)",
+        "intro-1": "400,000 USD purchase, passport for the whole family,",
+        "intro-2": "UK/US jumping off point",
+        "icons": {
+          "icon-1": "Immigration Program Customization",
+          "icon-2": "98% Pass Rate Guarantee",
+          "icon-3": "Full service from application to card pickup"
+        }
+      },
+      "consultant": {
+        "tag": "What we do",
+        "title": "Immigration Consultant Consultation",
+        "subtitle": "24-hour consulting services for you to develop exclusive programs according to your actual needs",
+        "consultants": {
+          "chat": "Chat now by scanning the code",
+          "consultant-1": {
+            "name": "Harry Abraham",
+            "title": "Senior Immigration Planner",
+            "desc": "10 years of experience in the immigration industry, specializing in Malta, Japan, Turkey and other countries for immigration status.",
+            "phone": "188 1234 5678"
+          },
+          "consultant-2": {
+            "name": "Thomas Novak",
+            "title": "Senior Immigration Planner",
+            "desc": "7 years of experience in the immigration industry, specializing in Turkey, Vanuatu, Canada and other countries for immigration status.",
+            "phone": "188 1234 5678"
+          },
+          "consultant-3": {
+            "name": "Edward Willey",
+            "title": "Senior Immigration Planner",
+            "desc": "9 years of experience in the immigration industry, specializing in Korea, Singapore, Turkey and other countries immigration status processing.",
+            "phone": "188 1234 5678"
+          },
+          "consultant-4": {
+            "name": "Berry Krebs",
+            "title": "Senior Immigration Planner",
+            "desc": "9 years of experience in the immigration industry, specializing in Australia, Ireland, Turkey and other countries for immigration status.",
+            "phone": "188 1234 5678"
+          }
+        }
+      },
+      "strengths": {
+        "tag": "Why choose us",
+        "title": "Tiger Core Strengths",
+        "advantages": {
+          "adv-1": "Property advantages, discounts on purchases, well below market price",
+          "adv-2": "With a strong project development and risk control system to make your migration path safer",
+          "adv-3": "Professional team at home and abroad, helping many people to realize their dreams overseas",
+          "adv-4": "Gathering three major law firms + 15 senior professional lawyers to escort",
+          "adv-5": "The first to grasp the immigration policy dynamics, to win the first opportunity for customers",
+          "adv-6": "Login interview guidance to increase the success rate of getting a visa"
+        }
+      }
+    },
+    "local": {
+      "masthead": {
+        "tag": "Multi-country visa waiver",
+        "title": "Turkish passport investment",
+        "intro-1": "Visa-free access to more than 110 countries and regions,",
+        "intro-2": "fast approval of Turkish passport"
+      },
+      "overview": {
+        "tag": "About Turkey",
+        "title": "Country Overview",
+        "desc": "Turkey is a magical country that straddles the Eurasian continent and is known as the \"cradle of civilization\"."
+      },
+      "immiInfo": {
+        "tag": "Your attention",
+        "title": "Immigration Information",
+        "infos": {
+          "info-1": {
+            "title": "Medical Resources",
+            "desc": "Health care services in Turkey are provided by public and private health care institutions. Under this system, all residents registered with the Social Security Institution can receive free medical treatment at hospitals contracted with SGK."
+          },
+          "info-2": {
+            "title": "Beautiful Scenery",
+            "desc": "Surrounded by sea on three sides, Turkey has 7,200 km of coastline and 1,500 hot springs, ranking 7th in the world and 1st in Europe; with the global Blue Flag beaches selected in 2021, Turkey's total number of Blue Flag beaches reaches 519,3rd in the world."
+          },
+          "info-3": {
+            "title": "Country Climate",
+            "desc": "With its mild climate and varied landscapes, from coastal plains to mountain pastures, from cedar forests to open grasslands, Turkey is one of the richest countries in the world in terms of plant species."
+          },
+          "info-4": {
+            "title": "Investment Economics",
+            "desc": "Turkey's real estate sector has seen tremendous growth in the past 10 years. Data shows that Turkey ranks sixth in the world in terms of annual price growth index, with an annual growth rate of over 11%, even higher than Australia and Canada."
+          }
+        }
+      }
+    },
+    "services": {
+
+    },
+    "about": {}
   }
 }
