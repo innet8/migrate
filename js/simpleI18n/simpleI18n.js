@@ -89,7 +89,9 @@ function init(simI18n) {
             simI18n.t = (key, isMeta = false) => translate(simI18n, key, isMeta)
 
             // page title & meta description, keywords
-            simI18n.setPageMeta()
+            if (simI18n.isMetaTranslated) {
+                simI18n.setPageMeta()
+            }
 
             const elements = document.querySelectorAll('[data-i18n]')
             elements.forEach((element) => {
@@ -113,6 +115,7 @@ const SimI18n = function (options = {
     lang: 'en_US',
     fallbackLang: 'en_US',
     translations: {},
+    isMetaTranslated: false,
 }) {
     //Factory
     let simI18n = {}
