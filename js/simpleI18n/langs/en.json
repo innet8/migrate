@@ -148,8 +148,102 @@
       }
     },
     "services": {
-
+      "masthead": {
+        "tag": "Turkey",
+        "title": "Overseas investment wind vane",
+        "intro": "One Step to Identity + Homeownership"
+      },
+      "reasons": {
+        "tag": "Why Turkey",
+        "title": "Turkey Home Buyer Immigration",
+        "reason-1": {
+          "title": "Prime Location",
+          "desc": "Straddling Europe and Asia, it is the crossroads between Europe and Asia, surrounded by sea on three sides, and is the exit of the Black Sea"
+        },
+        "reason-2": {
+          "title": "High Cost Performance",
+          "desc": "Only $400,000 USD in real estate, a room in the north = a suite in Turkey + national passport"
+        },
+        "reason-3": {
+          "title": "Good Education Level",
+          "desc": "12 years of free and compulsory education, 174 public universities, and many high-quality international schools in England, Germany, and France"
+        },
+        "reason-4": {
+          "title": "Travel Convenience",
+          "desc": "Fast track to the U.S. by applying for E1/E2 visas for 117 countries and territories with Turkish identity or Turkish identity"
+        }
+      },
+      "advantages": {
+        "tag": "About Turkey",
+        "title": "Home purchase to achieve home ownership",
+        "desc": "According to Knight Frank's property price growth index ranking for the third quarter of 2017, Turkey's property price growth rate was 11.1%, which is side-by-side evidence that property is in a value depression with a positive outlook; the government encourages the real estate industry by introducing a number of low tax incentives; Turkey's economic development momentum, well-developed transportation and infrastructure, low housing vacancy rate and high rental yields, all of which corroborate that buying freehold property in Turkey property in Turkey is an excellent way to achieve overseas asset allocation.",
+        "img-title": "Mesa Avenue",
+        "img-desc": "Property Address",
+        "adv-1": "Average price $8,330 per square foot",
+        "adv-2": "Proximity to the port (only 1 km)",
+        "adv-3": "Just 100 meters from Marmaray metro station",
+        "adv-4": "It is a large and comfortable community where life, business and leisure are integrated",
+        "adv-5": "Well-appointed facilities and abundant living resources",
+        "adv-6": "Average price $8,330 per square foot",
+        "adv-7": "Proximity to the port (only 1 km)",
+        "adv-8": "Just 100 meters from Marmaray metro station",
+        "adv-9": "It is a large and comfortable community where life, business and leisure are integrated",
+        "adv-10": "Well-appointed facilities and abundant living resources"
+      },
+      "economy": {
+        "tag": "Strength",
+        "title": "Turkish economic strength",
+        "card-1": {
+          "title": "Rapid economic development",
+          "desc": "China has become the second-largest trading partner of Turkey. 2021 Total Turkish exports to China grow by more than 50%. Number of Chinese companies operating in Turkey reaches 1,148 by the end of 2020"
+        },
+        "card-2": {
+          "title": "Rich tourism resources",
+          "desc": "The 10th most popular tourist destination in the world. Istanbul Airport is one of the busiest airports in Europe. Turkey's total tourism revenue climbs 103% in 2021 reaching $24.482 billion"
+        }
+      },
+      "passport": {
+        "tag": "Passport",
+        "title": "How to apply for a Turkish passport?",
+        "subtitle": "Application requirements",
+        "requirement-1": "1. The applicant is at least 18 years old (spouse and children under 18 years old can apply with the applicant).",
+        "requirement-2": "2. Purchase 400,000 USD property in Turkey.",
+        "requirement-3": "3. The property can be sold after three years without affecting the status",
+        "immigrationProcess": {
+          "title": "Immigration Process",
+          "step-1": "Consultation to determine the willingness to invest and authorize the lawyer to handle immigration-related procedures",
+          "step-2": "Successful selection (you can come to see the house on site or video viewing), you need to pay a deposit for the purchase of the house",
+          "step-3": "Open an account and pay the balance of the house price to the real estate company",
+          "step-4": "Go through the property transfer process and apply for an appraisal report",
+          "step-5": "Successful transfer of property and submission of application for Turkish residence card",
+          "step-6": "Submit information and apply for naturalization"
+        }
+      }
     },
-    "about": {}
+    "about": {
+      "masthead": {
+        "tag": "Tiger",
+        "title": "About Us",
+        "desc": "Set industry service standards and customize the most suitable immigration solutions"
+      },
+      "profile": {
+        "tag": "Company Profile",
+        "title": "Tiger Technology and Real Estate Investment Co.",
+        "text-1": "Tiger Technology and Real Estate Investment Co., Ltd. is a one-stop comprehensive cross-border service provider focusing on Turkish immigration services, headquartered in Istanbul, Turkey, with global services.",
+        "text-2": "Tiger Technology has always been committed to providing the global elite with \"unhindered and worry-free settlement\" solutions. From children's overseas education, investment and property purchase to overseas identity planning, Tiger Technology has been investing in the field of overseas settlement and global business layout to provide a bridge to the world for people who want to realize their global dreams.",
+        "text-3": "Tiger Technology puts itself in the shoes of its customers and sets industry service standards through model and product innovation, and is committed to customizing the most appropriate immigration solutions for tens of thousands of users.",
+        "quote": "“Unimpeded travel and worry-free settlement”",
+        "author": "Tiger Technology"
+      },
+      "contacts": {
+        "phone": "Contact Number",
+        "num-1": "+90 551 995 5905",
+        "num-2": "+90 (212) 916 25 88",
+        "email": "Email",
+        "email-1": "bussiness@sarzla.com",
+        "address": "Company Address",
+        "address-1": "ZİYA GÖKALP MAH. SÜLEYMAN DEMİREL BLV."
+      }
+    }
   }
 }

@@ -215,41 +215,50 @@
             @apply text-base;
             color: var(--color-secondary);
         }
+
         /* Economic strength ends here */
         /* Passport starts here */
         .passport-wrap {
             padding: 120px 0 120px;
             flex-direction: column;
         }
+
         .passport-section {
             @apply grid grid-cols-1 lg:flex flex-row rounded-2xl bg-white overflow-hidden;
             width: 1200px;
             box-shadow: 0 0 15px rgba(159, 159, 159, 0.15);
         }
+
         .passport-contents {
             @apply px-11 py-12;
         }
+
         .passport-intro__left {
             @apply text-base text-left;
         }
+
         .passport-intro__right {
             @apply text-xl text-left;
         }
+
         .passport-title {
             margin-bottom: 3rem; /* 48px */
             text-align: left;
             font-size: 3rem; /* 48px */
             line-height: 1.15;
         }
+
         .intro-title {
             @apply text-3xl text-black mb-6;
         }
+
         .passport-process-wrap {
             @apply relative flex flex-row justify-center items-center;
             background-color: var(--passport-process-wrap);
             width: fit-content;
             max-width: 600px;
         }
+
         .passport-process-wrap:after {
             @apply absolute;
             content: "";
@@ -264,21 +273,26 @@
             transform: translate(-15%, 15%);
             z-index: 1;
         }
+
         .passport-process {
             @apply relative mx-12 my-14;
             height: fit-content;
             min-width: 500px;
         }
+
         .passport-process .section-intro {
             position: relative;
             z-index: 5;
         }
+
         .passport-process li {
             margin-bottom: 1rem; /* 16px */
         }
+
         .passport-process li > span {
             margin-right: .5em;
         }
+
         /* Passport ends here */
     </style>
 </head>
@@ -288,51 +302,62 @@
     <div class="masthead">
         <img src="/img/services/bg_services.png" alt class="background" id="background-homepage">
         <div class="intro-text">
-            <div class="half-opacity-tag intro-company-name rounded-full">Turkey</div>
-            <div class="primary-intro">
+            <div class="half-opacity-tag intro-company-name rounded-full" data-i18n="services.masthead.tag">Turkey</div>
+            <div class="primary-intro" data-i18n="services.masthead.title">
                 <p>Overseas investment wind vane</p>
             </div>
-            <div class="secondary-intro">
+            <div class="secondary-intro" data-i18n="services.masthead.desc">
                 <p>One Step to Identity + Homeownership</p>
             </div>
         </div>
     </div>
     <div class="reasons-wrap section-wrap flex-col">
         <div class="section-title-wrap">
-            <div class="half-opacity-tag section-top rounded-full">Why Turkey</div>
-            <div class="section-title">Turkey Home Buyer Immigration</div>
+            <div class="half-opacity-tag section-top rounded-full" data-i18n="services.reasons.tag">Why Turkey</div>
+            <div class="section-title" data-i18n="services.reasons.title">Turkey Home Buyer Immigration</div>
         </div>
         <div class="immi-reasons">
             <div class="immi-reason">
                 <img src="/img/svg/ico_location.svg" alt>
-                <h1>Prime Location</h1>
-                <p>Straddling Europe and Asia, it is the crossroads between Europe and Asia, surrounded by sea on three
-                    sides, and is the exit of the Black Sea</p>
+                <h1 data-i18n="services.reasons.reason-1.title">Prime Location</h1>
+                <p data-i18n="services.reasons.reason-1.desc">
+                    Straddling Europe and Asia, it is the crossroads between Europe and Asia, surrounded by sea on three
+                    sides, and is the exit of the Black Sea
+                </p>
             </div>
             <div class="immi-reason">
                 <img src="/img/svg/ico_performance.svg" alt>
-                <h1>High Cost Performance</h1>
-                <p>Only $400,000 in real estate, a room in the north = a suite in Turkey + national passport</p>
+                <h1 data-i18n="services.reasons.reason-2.title">High Cost Performance</h1>
+                <p data-i18n="services.reasons.reason-2.desc">
+                    Only $400,000 in real estate, a room in the north = a suite in Turkey + national passport
+                </p>
             </div>
             <div class="immi-reason">
                 <img src="/img/svg/ico_education.svg" alt>
-                <h1>Good Education Level</h1>
-                <p>12 years of free and compulsory education, 174 public universities, and many high-quality
-                    international schools in England, Germany, and France</p>
+                <h1 data-i18n="services.reasons.reason-3.title">Good Education Level</h1>
+                <p data-i18n="services.reasons.reason-3.desc">
+                    12 years of free and compulsory education, 174 public universities, and many high-quality
+                    international schools in England, Germany, and France
+                </p>
             </div>
             <div class="immi-reason">
                 <img src="/img/svg/ico_travel.svg" alt>
-                <h1>Travel Convenience</h1>
-                <p>Fast track to the U.S. by applying for E1/E2 visas for 117 countries and territories with Turkish
-                    identity or Turkish identity</p>
+                <h1 data-i18n="services.reasons.reason-4.title">Travel Convenience</h1>
+                <p data-i18n="services.reasons.reason-4.desc">
+                    Fast track to the U.S. by applying for E1/E2 visas for 117 countries and territories with Turkish
+                    identity or Turkish identity
+                </p>
             </div>
         </div>
     </div>
     <div class="section-wrap gap-section flex-col">
         <div class="section-title-wrap mt-36 w-fit">
-            <div class="half-opacity-tag section-top rounded-full">About Turkey</div>
-            <div class="section-title w-800">Home purchase to achieve home ownership</div>
-            <div class="section-intro text-left container">
+            <div class="half-opacity-tag section-top rounded-full" data-i18n="services.advantages.tag">About Turkey
+            </div>
+            <div class="section-title w-800" data-i18n="services.advantages.title">Home purchase to achieve home
+                ownership
+            </div>
+            <div class="section-intro text-left container" data-i18n="services.advantages.desc">
                 According to Knight Frank's property price growth index ranking for the third quarter of 2017,
                 Turkey's property price growth rate was 11.1%,
                 which is side-by-side evidence that property is in a value depression with a positive outlook;
@@ -351,8 +376,8 @@
                         <img src="/img/svg/ico_location_2.svg" alt>
                     </div>
                     <div class="float-card-text">
-                        <h1 class="text-3xl font-bold">Mesa Avenue</h1>
-                        <span class="float-card-addr">Property Address</span>
+                        <h1 class="text-3xl font-bold" data-i18n="services.advantages.img-title">Mesa Avenue</h1>
+                        <span class="float-card-addr" data-i18n="services.advantages.img-desc">Property Address</span>
                     </div>
                 </div>
             </div>
@@ -362,51 +387,51 @@
                         <div class="swiper-slide">
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>Average price $8,330 per square foot</span>
+                                <span data-i18n="services.advantages.adv-1">Average price $8,330 per square foot</span>
                             </div>
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>Proximity to the port (only 1 km)</span>
+                                <span data-i18n="services.advantages.adv-2">Proximity to the port (only 1 km)</span>
                             </div>
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>Just 100 meters from Marmaray metro station</span>
+                                <span data-i18n="services.advantages.adv-3">Just 100 meters from Marmaray metro station</span>
                             </div>
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>
-                                It is a large and comfortable community where life,
-                                business and leisure are integrated
-                            </span>
+                                <span data-i18n="services.advantages.adv-4">
+                                    It is a large and comfortable community where life,
+                                    business and leisure are integrated
+                                </span>
                             </div>
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>Well-appointed facilities and abundant living resources</span>
+                                <span data-i18n="services.advantages.adv-5">Well-appointed facilities and abundant living resources</span>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>Average price $8,330 per square foot</span>
+                                <span data-i18n="services.advantages.adv-6">Average price $8,330 per square foot</span>
                             </div>
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>Proximity to the port (only 1 km)</span>
+                                <span data-i18n="services.advantages.adv-7">Proximity to the port (only 1 km)</span>
                             </div>
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>Just 100 meters from Marmaray metro station</span>
+                                <span data-i18n="services.advantages.adv-8">Just 100 meters from Marmaray metro station</span>
                             </div>
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>
+                                <span data-i18n="services.advantages.adv-9">
                                 It is a large and comfortable community where life,
                                 business and leisure are integrated
                             </span>
                             </div>
                             <div class="purchase-advantage">
                                 <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span>Well-appointed facilities and abundant living resources</span>
+                                <span data-i18n="services.advantages.adv-10">Well-appointed facilities and abundant living resources</span>
                             </div>
                         </div>
 
@@ -423,23 +448,23 @@
     <div class="economic-section section-wrap">
         <div class="section-contents">
             <div class="section-title-wrap__left section-title-wrap">
-                <div class="half-opacity-tag section-top rounded-full">Strength</div>
-                <div class="section-title text-left">Turkish economic strength</div>
+                <div class="half-opacity-tag section-top rounded-full" data-i18n="services.economy.tag">Strength</div>
+                <div class="section-title text-left" data-i18n="services.economy.title">Turkish economic strength</div>
             </div>
         </div>
         <div class="economic-media">
             <img class="rounded-2xl" src="/img/services/bg_economic.png" alt>
             <div class="talk-card" id="talk-card-1">
-                <h1>Rapid economic development</h1>
-                <p>
-                    China has become the second largest trading partner of Turkey.
+                <h1 data-i18n="services.economy.card-1.title">Rapid economic development</h1>
+                <p data-i18n="services.economy.card-1.desc">
+                    China has become the second-largest trading partner of Turkey.
                     2021 Total Turkish exports to China grow by more than 50%.
                     Number of Chinese companies operating in Turkey reaches 1,148 by the end of 2020
                 </p>
             </div>
             <div class="talk-card" id="talk-card-2">
-                <h1 class="talk-title">Rich tourism resources</h1>
-                <p class="talk-text">
+                <h1 class="talk-title" data-i18n="services.economy.card-2.title">Rich tourism resources</h1>
+                <p class="talk-text" data-i18n="services.economy.card-2.desc">
                     The 10th most popular tourist destination in the world.
                     Istanbul Airport is one of the busiest airports in Europe.
                     Turkey's total tourism revenue climbs 103% in 2021 reaching $24.482 billion
@@ -451,20 +476,24 @@
         <div class="passport-section">
             <div class="passport-contents section-contents">
                 <div class="section-title-wrap__left section-title-wrap">
-                    <div class="half-opacity-tag section-top rounded-full">You need</div>
-                    <div class="passport-title section-title text-left mb-12">How to apply for a Turkish passport?</div>
+                    <div class="half-opacity-tag section-top rounded-full" data-i18n="services.passport.tag">You need
+                    </div>
+                    <div class="passport-title section-title text-left mb-12" data-i18n="services.passport.title">How to
+                        apply for a Turkish passport?
+                    </div>
                     <div class="passport-intro__left section-intro">
-                        <h1 class="intro-title">
+                        <h1 class="intro-title" data-i18n="services.passport.subtitle">
                             Application requirements
                         </h1>
                         <ol>
-                            <li>
-                                1. The applicant is at least 18 years old (spouse and children under 18 years old can apply with the applicant).
+                            <li data-i18n="services.passport.requirement-1">
+                                1. The applicant is at least 18 years old (spouse and children under 18 years old can
+                                apply with the applicant).
                             </li>
-                            <li>
+                            <li data-i18n="services.passport.requirement-2">
                                 2. Purchase 400,000 USD property in Turkey.
                             </li>
-                            <li>
+                            <li data-i18n="services.passport.requirement-3">
                                 3. The property can be sold after three years without affecting the status
                             </li>
                         </ol>
@@ -474,33 +503,45 @@
             <div class="passport-process-wrap">
                 <div class="passport-process">
                     <div class="passport-intro__right section-intro">
-                        <h1 class="intro-title">
+                        <h1 class="intro-title" data-i18n="services.passport.immigrationProcess.title">
                             Immigration Process
                         </h1>
                         <ol>
                             <li>
                                 <span class="orange">❶</span>
-                                Consultation to determine the willingness to invest and authorize the lawyer to handle immigration-related procedures
+                                <span data-i18n="services.passport.immigrationProcess.step-1">
+                                    Consultation to determine the willingness to invest and authorize the lawyer to handle immigration-related procedures
+                                </span>
                             </li>
                             <li>
                                 <span class="orange">❷</span>
-                                Successful selection (you can come to see the house on site or video viewing), you need to pay a deposit for the purchase of the house
+                                <span data-i18n="services.passport.immigrationProcess.step-2">
+                                    Successful selection (you can come to see the house on site or video viewing), you need to pay a deposit for the purchase of the house
+                                </span>
                             </li>
                             <li>
                                 <span class="orange">❸</span>
-                                Open an account and pay the balance of the house price to the real estate company
+                                <span data-i18n="services.passport.immigrationProcess.step-3">
+                                    Open an account and pay the balance of the house price to the real estate company
+                                </span>
                             </li>
                             <li>
                                 <span class="orange">❹</span>
-                                Go through the property transfer process and apply for an appraisal report
+                                <span data-i18n="services.passport.immigrationProcess.step-4">
+                                    Go through the property transfer process and apply for an appraisal report
+                                </span>
                             </li>
                             <li>
                                 <span class="orange">❺</span>
-                                Successful transfer of property and submission of application for Turkish residence card
+                                <span data-i18n="services.passport.immigrationProcess.step-5">
+                                    Successful transfer of property and submission of application for Turkish residence card
+                                </span>
                             </li>
                             <li style="margin-bottom: 0;">
                                 <span class="orange">❻</span>
-                                Submit information and apply for naturalization
+                                <span data-i18n="services.passport.immigrationProcess.step-6">
+                                    Submit information and apply for naturalization
+                                </span>
                             </li>
                         </ol>
                     </div>
