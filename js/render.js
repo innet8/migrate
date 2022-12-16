@@ -1,5 +1,22 @@
 /**
- * render components in array 'components' to nodes in its' roots
+ * @description returns is this device a mobile device
+ * @return {boolean} is mobile device
+ * */
+function isThisDeviceMobile() {
+    if (navigator.userAgent.match(/Android/i)
+        || navigator.userAgent.match(/webOS/i)
+        || navigator.userAgent.match(/iPhone/i)
+        || navigator.userAgent.match(/iPad/i)
+        || navigator.userAgent.match(/iPod/i)
+        || navigator.userAgent.match(/BlackBerry/i)
+        || navigator.userAgent.match(/Windows Phone/i)) {
+        return true
+    }
+    return window.innerWidth <= 768
+}
+
+/**
+ * render components in array 'components' to nodes in its roots
  * */
 function render(roots, template) {
     roots.forEach(root => {
@@ -10,7 +27,7 @@ function render(roots, template) {
 
 /**
  * Render and push components to some selector's childrenNodes from components array,
- * each component has a array for target nodes.
+ * each component has an array for target nodes.
  * Data structure of componentsList:
  * [{
  *       roots: ['#root1', '#root2'],
@@ -25,9 +42,18 @@ function render(roots, template) {
  * */
 const renderPage = (componentsList) => {
     componentsList.forEach(item => {
+        // if this device is mobile, render mobile components
+        if (isThisDeviceMobile() && !item.component()?.isForMobile) {
+            render(item.roots, item.alternative()?.template)
+            if (typeof item.alternative()?.callback === 'function') {
+                item.alternative()?.callback()
+            }
+            return
+        }
+
         render(item.roots, item.component().template)
-        if (item.component()?.callback) {
-            item?.component()?.callback()
+        if (typeof item.component()?.callback === 'function') {
+            item.component()?.callback()
         }
     })
 }
