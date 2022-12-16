@@ -155,9 +155,6 @@ const SimI18n = function (options = {
         window.location.reload()
     }
 
-    console.log(simI18n.lang, options.lang, getLang())
-    console.log(simI18n.translations, options.translations)
-
     if (!simI18n.translations.hasOwnProperty(simI18n.lang)) {
         const errorLang = simI18n.lang
         simI18n?.setLang(simI18n?.fallbackLang)
