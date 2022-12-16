@@ -57,7 +57,7 @@ function getLang () {
  * @return {string} the translation
  * */
 function translate(simI18n, key, isMeta = false) {
-    const json= simI18n.languageJson
+    const json = simI18n.languageJson
     const metaJson = simI18n.languageJson
     // Optimized object size for deep search
     delete metaJson.languageJson
@@ -76,6 +76,11 @@ function translate(simI18n, key, isMeta = false) {
     // if keys.length > 1, deep search
     for (let i = 0; i < keys.length; i++) {
         value = deepSearch(value, keys[i])
+    }
+
+    // if the value is an empty string, return it as it was
+    if (value === '') {
+        return ''
     }
 
     // Validation: if value doesn't exist then return key string
@@ -111,7 +116,10 @@ function init(simI18n) {
                 element.innerHTML = simI18n.t(element.dataset.i18n)
             })
 
-            // data-i18n-attr example: placeholder:form.placeholder ,means set placeholder in translation form.placeholder
+            /* data-i18n-attr example: placeholder:form.placeholder,
+            * means set placeholder in translation form.placeholder,
+            * use ':' to split attribute and key
+            */
             const elementsAttr = document.querySelectorAll('[data-i18n-attr]')
             elementsAttr.forEach((element) => {
                 const [attr, key] = element.dataset.i18nAttr.split(':')

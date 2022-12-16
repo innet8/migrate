@@ -277,10 +277,10 @@
         await renderPage(components)
 
         const simI18n = new SimI18n({
-            lang: 'en_US',
             fallbackLang: 'en_US',
             translations: {
-                en_US: '/js/simpleI18n/lang/en.json'
+                en_US: '/js/simpleI18n/lang/en_US.json',
+                zh_Hans: '/js/simpleI18n/lang/zh_Hans.json',
             },
             isMetaTranslated: true,
         })

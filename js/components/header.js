@@ -50,8 +50,8 @@ function header() {
     <div class="logo-wrap">
         <img src="/img/svg/logo.svg" alt="Tiger Migration Logo">
         <div class="flex flex-col">
-            <h1 class="logo-text-primary">Tiger Migration</h1>
-            <h2 class="logo-text-secondary">Professional·Focus on Turkish Immigration</h2>
+            <h1 class="logo-text-primary" data-i18n="header.logo">Tiger Migration</h1>
+            <h2 class="logo-text-secondary" data-i18n="header.logoDesc">Professional·Focus on Turkish Immigration</h2>
         </div>
     </div>
     <ul id="header-nav-list">

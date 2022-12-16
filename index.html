@@ -268,8 +268,11 @@
         <div class="intro-text">
             <div class="half-opacity-tag intro-company-name rounded-full" data-i18n="index.masthead.tag">Tiger Migration</div>
             <div class="primary-intro">
-                <p data-i18n="index.masthead.title">Turkish passport investment</p>
-                <p class="orange-underline" data-i18n="index.masthead.subtitle">(home purchase)</p>
+                <p>
+                    <span data-i18n="index.masthead.title">Turkish passport investment</span>
+                    <span class="orange-underline" data-i18n="index.masthead.subtitle">(home purchase)</span>
+                </p>
+<!--                <p></p>-->
             </div>
             <div class="secondary-intro">
                 <p data-i18n="index.masthead.intro-1">400,000 USD purchase, passport for the whole family,</p>
@@ -522,10 +525,10 @@
         await renderPage(components)
 
         const simI18n = new SimI18n({
-            lang: 'en_US',
             fallbackLang: 'en_US',
             translations: {
-                en_US: '/js/simpleI18n/lang/en.json'
+                en_US: '/js/simpleI18n/lang/en_US.json',
+                zh_Hans: '/js/simpleI18n/lang/zh_Hans.json',
             },
             isMetaTranslated: true,
         })
