@@ -42,6 +42,10 @@
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/form.css">
 
+    <!--    Noto Sans || 思源黑体-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900">
+
     <style type="text/tailwindcss">
         @tailwind base;
         @tailwind components;
@@ -409,31 +413,31 @@
                                 <span data-i18n="services.advantages.adv-5">Well-appointed facilities and abundant living resources</span>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="purchase-advantage">
-                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span data-i18n="services.advantages.adv-6">Average price $8,330 per square foot</span>
-                            </div>
-                            <div class="purchase-advantage">
-                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span data-i18n="services.advantages.adv-7">Proximity to the port (only 1 km)</span>
-                            </div>
-                            <div class="purchase-advantage">
-                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span data-i18n="services.advantages.adv-8">Just 100 meters from Marmaray metro station</span>
-                            </div>
-                            <div class="purchase-advantage">
-                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span data-i18n="services.advantages.adv-9">
-                                It is a large and comfortable community where life,
-                                business and leisure are integrated
-                            </span>
-                            </div>
-                            <div class="purchase-advantage">
-                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>
-                                <span data-i18n="services.advantages.adv-10">Well-appointed facilities and abundant living resources</span>
-                            </div>
-                        </div>
+<!--                        <div class="swiper-slide">-->
+<!--                            <div class="purchase-advantage">-->
+<!--                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>-->
+<!--                                <span data-i18n="services.advantages.adv-6">Average price $8,330 per square foot</span>-->
+<!--                            </div>-->
+<!--                            <div class="purchase-advantage">-->
+<!--                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>-->
+<!--                                <span data-i18n="services.advantages.adv-7">Proximity to the port (only 1 km)</span>-->
+<!--                            </div>-->
+<!--                            <div class="purchase-advantage">-->
+<!--                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>-->
+<!--                                <span data-i18n="services.advantages.adv-8">Just 100 meters from Marmaray metro station</span>-->
+<!--                            </div>-->
+<!--                            <div class="purchase-advantage">-->
+<!--                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>-->
+<!--                                <span data-i18n="services.advantages.adv-9">-->
+<!--                                It is a large and comfortable community where life,-->
+<!--                                business and leisure are integrated-->
+<!--                            </span>-->
+<!--                            </div>-->
+<!--                            <div class="purchase-advantage">-->
+<!--                                <img class="mr-3" src="/img/svg/advantage_check.svg" alt>-->
+<!--                                <span data-i18n="services.advantages.adv-10">Well-appointed facilities and abundant living resources</span>-->
+<!--                            </div>-->
+<!--                        </div>-->
 
                     </div>
                 </div>
@@ -556,11 +560,12 @@
     const swiper = new Swiper('.swiper', {
         // Optional parameters
         direction: 'horizontal',
-        rewind: true,
+        // rewind: true,
+        loop: true,
         loopFillGroupWithBlank: true,
         slidesPerGroup: 1,
         slidesPerView: 1,
-        // spaceBetween: 24,
+        spaceBetween: 24,
         centeredSlides: false,
         // slidesPerView: 'auto',
         // Navigation arrows

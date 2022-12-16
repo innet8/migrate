@@ -9,7 +9,14 @@
 }
 
 body {
-    font-family: "HarmonyOS Sans", -apple-system, serif;
+    /* This HarmonyOS Sans is for Latin characters and numbers only*/
+    font-family: "HarmonyOS Sans",
+    --apple-system,
+    "PingFang SC",
+    "PingFang TC",
+    "Noto Sans SC",
+    "Noto Sans TC",
+    sans-serif;
 }
 
 .w-800 {
@@ -30,6 +37,7 @@ body {
 .orange-underline::after {
     content: "";
     position: absolute;
+    right: 0;
     bottom: 0;
     display: block;
     width: 100%;
