@@ -1,6 +1,6 @@
 {
   "language": "en_US",
-  "localizedLanguage": "English (US)",
+  "localizedLanguage": "English",
   "titles": {
     "index": "Tiger Migration - Focus on Turkish Immigration",
     "local": "Tiger Migration - Local Conditions",
@@ -18,9 +18,9 @@
       "local": "Local Conditions",
       "services": "Services",
       "about": "About Us",
-      "English": "English (United States)",
-      "sChinese": "Chinese (Simplified)",
-      "tChinese": "Chinese (Traditional)"
+      "English": "English",
+      "sChinese": "Chinese - Simplified",
+      "tChinese": "Chinese - Traditional"
     },
     "footer": {
       "copyrights": "©2022 By Tiger.com All rights reserved."

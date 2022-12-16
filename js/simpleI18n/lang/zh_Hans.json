@@ -1,6 +1,6 @@
 {
   "language": "zh_Hans",
-  "localizedLanguage": "中文（简体）",
+  "localizedLanguage": "中文-简体",
   "titles": {
     "index": "老虎科技 | 专业·专注土耳其移民",
     "local": "老虎科技 | 风土人情",
@@ -18,9 +18,9 @@
       "local": "风土人情",
       "services": "购房移民",
       "about": "关于我们",
-      "English": "英语（美国）",
-      "sChinese": "中文（简体）",
-      "tChinese": "中文（繁体）"
+      "English": "英语-美国",
+      "sChinese": "中文-简体",
+      "tChinese": "中文-繁体"
     },
     "footer": {
       "copyrights": "©2022 By Tiger.com All rights reserved."
@@ -206,8 +206,8 @@
         "tag": "你需要的",
         "title": "如何办理土耳其护照？",
         "subtitle": "申请条件",
-        "requirement-1": "1、申请人年满18周岁（配偶何未满18周岁的子女可随同申请）；",
-        "requirement-2": "2、在土耳其购买40万美金房产； ",
+        "requirement-1": "1、申请人年满18周岁（配偶和未满18周岁的子女可随同申请）；",
+        "requirement-2": "2、在土耳其购买40万美金房产；",
         "requirement-3": "3、房产三年后可售出，不影响身份",
         "immigrationProcess": {
           "title": "移民办理流程",
@@ -239,7 +239,7 @@
         "phone": "联系电话",
         "num-1": "+90 551 995 5905",
         "num-2": "+90 (212) 916 25 88",
-        "email": "Email",
+        "email": "电子邮箱",
         "email-1": "bussiness@sarzla.com",
         "address": "公司地址",
         "address-1": "ZİYA GÖKALP MAH. SÜLEYMAN DEMİREL BLV."
