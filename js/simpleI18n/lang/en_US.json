@@ -2,15 +2,21 @@
   "language": "en_US",
   "localizedLanguage": "English",
   "titles": {
-    "index": "Tiger Migration - Focus on Turkish Immigration",
+    "index": "Tiger Migration - Specialty·specialising in Turkish immigration",
     "local": "Tiger Migration - Local Conditions",
     "services": "Tiger Migration - Immigration Services",
     "about": "Tiger Migration - About Us"
   },
-  "description": "Tiger Technology, a one-stop integrated cross-border service provider with a focus on Turkish immigration services, is a global service provider.",
-  "keyword": "",
+  "description": "Tiger Migration, a one-stop integrated cross-border service provider with a focus on Turkish immigration services, is a global service provider.",
+  "keyword": "Migrate,buy a home,settle",
   "translations": {
     "getLang": "getLang",
+    "styles": {
+      "masthead": {
+        "fontWeight": "font-weight: 700;",
+        "display": "display: block; width: 1000px;"
+      }
+    },
     "header": {
       "logo": "Tiger Migration",
       "logoDesc": "Professional·Focus on Turkish Immigration",
@@ -19,8 +25,8 @@
       "services": "Services",
       "about": "About Us",
       "English": "English",
-      "sChinese": "中文 - 简体",
-      "tChinese": "中文 - 繁體"
+      "sChinese": "简体 - 中文",
+      "tChinese": "繁體 - 中文"
     },
     "footer": {
       "copyrights": "©2022 By Tiger.com All rights reserved."

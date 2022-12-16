@@ -66,7 +66,7 @@
         .profile-title {
             @apply text-left;
             font-size: 3rem; /* 48px */
-            line-height: 1.15;
+            line-height: 56px;
         }
 
         .profile-title-wrap {
@@ -74,7 +74,9 @@
         }
 
         .profile-intro {
-            @apply text-left text-base;
+            @apply text-left;
+            font-size: 16px;
+            line-height: 24px;
             width: 550px;
         }
 
@@ -153,13 +155,14 @@
         .vertical-icon__text-title {
             font-size: 1.25rem; /* 20px */
             margin-bottom: 0.75rem; /* 12px */
+            line-height: 23px;
             font-weight: 400;
         }
 
         .vertical-icon__text-desc {
             font-size: 1rem; /* 16px */
             line-height: 1.5rem; /* 24px */
-            font-weight: 300;
+            font-weight: 400;
         }
     </style>
 </head>
@@ -169,9 +172,15 @@
     <div class="masthead">
         <img src="/img/about/bg_about.png" alt class="background" id="background-homepage">
         <div class="intro-text">
-            <div class="half-opacity-tag intro-company-name rounded-full" data-i18n="about.masthead.tag">Tiger</div>
+            <div
+                class="half-opacity-tag intro-company-name rounded-full"
+                data-i18n="about.masthead.tag"
+                data-i18n-attr="style:styles.masthead.fontWeight"
+            >
+                Tiger
+            </div>
             <div class="primary-intro">
-                <p data-i18n="about.masthead.title">About Us</p>
+                <p data-i18n="about.masthead.title" data-i18n-attr="style:styles.masthead.fontWeight">About Us</p>
             </div>
             <div class="secondary-intro">
                 <p data-i18n="about.masthead.desc">
@@ -193,19 +202,19 @@
                         </div>
                     </div>
                     <div class="profile-intro section-intro">
-                        <p style="color: black;" data-i18n="about.profile.text-1">
+                        <p style="color: black; font-weight: 500;" data-i18n="about.profile.text-1">
                             Tiger Technology and Real Estate Investment Co., Ltd. is a one-stop comprehensive
                             cross-border service provider focusing on Turkish immigration services, headquartered in
                             Istanbul, Turkey, with global services.
                         </p>
-                        <p data-i18n="about.profile.text-2">
+                        <p style="font-weight: 500;" data-i18n="about.profile.text-2">
                             Tiger Technology has always been committed to providing the global elite with "unhindered
                             and worry-free settlement" solutions. From children's overseas education, investment and
                             property purchase to overseas identity planning, Tiger Technology has been investing in the
                             field of overseas settlement and global business layout to provide a bridge to the world for
                             people who want to realize their global dreams.
                         </p>
-                        <p data-i18n="about.profile.text-3">
+                        <p style="font-weight: 500;" data-i18n="about.profile.text-3">
                             Tiger Technology puts itself in the shoes of its customers and sets industry service
                             standards through model and product innovation, and is committed to customizing the most
                             appropriate immigration solutions for tens of thousands of users.

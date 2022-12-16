@@ -93,7 +93,7 @@ function header() {
         </li>
     </ul>
     <div class="language-wrap">
-        <div class="absolute w-fit h-fit top-1/2 left-1/2 transform -translate-y-1/2">
+        <div class="absolute w-full h-fit top-1/2 transform -translate-y-1/2">
             <a href="javascript:void(0)" id="menu-button" aria-expanded="true" aria-haspopup="true">
                 <span data-i18n="getLang"></span>
                 <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"

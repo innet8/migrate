@@ -36,20 +36,30 @@
 
 .adv-texts {
     /*padding: 3rem 2.75rem; !* 48px 44px*!*/
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 100%;
     margin-left: 3rem;
     z-index: 1;
 }
 
+.adv-head {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+}
+
 .adv-primary-title {
+    font-weight: 700;
     font-size: 40px;
+    line-height: 47px;
 }
 
 .adv-tags {
+    margin-top: 12px;
     display: flex;
 }
 
@@ -58,7 +68,10 @@
     margin-right: 1rem; /* 16px */
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 0.25rem;
-    font-family: -apple-system, Microsoft YaHei, sans-serif;
+    font-family: "PingFang SC", "PingFang TC", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 16px;
 }
 
 .adv-dartboard {

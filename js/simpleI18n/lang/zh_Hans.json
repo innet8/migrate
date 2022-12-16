@@ -1,32 +1,38 @@
 {
   "language": "zh_Hans",
-  "localizedLanguage": "中文-简体",
+  "localizedLanguage": "简体 - 中文",
   "titles": {
-    "index": "老虎科技 | 专业·专注土耳其移民",
-    "local": "老虎科技 | 风土人情",
-    "services": "老虎科技 | 购房移民",
-    "about": "老虎科技 | 关于我们"
+    "index": "老虎移民 | 专业·专注土耳其移民",
+    "local": "老虎移民 | 风土人情",
+    "services": "老虎移民 | 购房移民",
+    "about": "老虎移民 | 关于我们"
   },
-  "description": "老虎科技,以土耳其移民服务为主的一站式综合跨境服务机构,面向全球服务.",
-  "keyword": "",
+  "description": "老虎移民,以土耳其移民服务为主的一站式综合跨境服务机构,面向全球服务.",
+  "keyword": "移民,购房,定居",
   "translations": {
     "getLang": "getLang",
+    "styles": {
+      "masthead": {
+        "fontWeight": "font-weight: 500;",
+        "display": "display: flex; width: 720px;"
+      }
+    },
     "header": {
-      "logo": "老虎科技",
+      "logo": "老虎移民",
       "logoDesc": "专业·专注土耳其移民",
       "index": "首页",
       "local": "风土人情",
       "services": "购房移民",
       "about": "关于我们",
       "English": "English",
-      "sChinese": "中文 - 简体",
-      "tChinese": "中文 - 繁體"
+      "sChinese": "简体 - 中文",
+      "tChinese": "繁體 - 中文"
     },
     "footer": {
       "copyrights": "©2022 By Tiger.com All rights reserved."
     },
     "advertisement-1": {
-      "head": "老虎科技",
+      "head": "老虎移民",
       "title": "专注土耳其移民",
       "tags": {
         "tag-1": "中土直营",

@@ -14,7 +14,7 @@
         lang="zh_CN"
         content="老虎科技,以土耳其移民服务为主的一站式综合跨境服务机构,面向全球服务."
     />
-    <meta name="keywords" lang="en" content="UZAQ,Noodles,delicious,tasty" />
+    <meta name="keywords" lang="en" content="Migrate,buy a home,settle" />
     <meta name="keywords" lang="zh_CN" content="移民,购房,定居" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -94,20 +94,27 @@
 
         .intro-company-name {
             @apply text-2xl uppercase;
-            font-weight: bold;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 44px;
+            padding: 0.875rem 1.75rem;/* 14px 28px */
             background-color: rgba(255, 255, 255, 0.1);
         }
 
         .primary-intro {
-            @apply my-5 text-white text-6xl font-medium text-center;
-            line-height: 1.15;
+            @apply mt-6 mb-9 text-white font-medium text-center;
+            /*width: 1000px;*/
+            /*max-width: 790px;*/
+            font-weight: 500;
+            font-size: 4.5rem; /* 72px */
+            line-height: 84px;
         }
 
         .secondary-intro {
             @apply text-center;
-            font-size: 1.6em;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 44px;
         }
 
         .vertical-icons {
@@ -120,15 +127,15 @@
             height: 80%;
         }
 
-        .swiper {
-            /*max-width: 1920px;*/
-            min-width: 1280px;
-            width: auto;
+        .swiper-consultants {
+            /*max-width: 1280px;*/
+            /*min-width: 1280px;*/
+            width: 1280px;
             /*width: 95%;*/
             height: 450px;
         }
 
-        .swiper-page-btn {
+        .swiper-consultants__page-btn {
             @apply absolute top-1/2 transform -translate-y-1/2 shadow-lg transition-all duration-150;
             width: 60px;
             height: 60px;
@@ -141,12 +148,12 @@
             cursor: pointer;
         }
 
-        .swiper-page-btn:hover {
+        .swiper-consultants__page-btn:hover {
             background-color: var(--color-primary);
             color: white;
         }
 
-        .swiper-page-btn:after {
+        .swiper-consultants__page-btn:after {
             font-size: 1em;
         }
 
@@ -199,16 +206,22 @@
         }
 
         .consultant-name {
-            @apply text-xl;
+            font-size: 20px;
+            line-height: 23px;
         }
 
         .consultant-title {
             @apply mt-1 mb-6;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
             color: var(--color-primary);
         }
 
         .consultant-intro {
             color: var(--color-secondary);
+            font-size: 16px;
+            line-height: 24px;
         }
 
         /*Consultants content ends here*/
@@ -249,8 +262,11 @@
         }
 
         .strength-card-num {
-            @apply ml-6 mr-6 relative text-4xl font-bold;
+            @apply ml-6 mr-6 relative;
             z-index: 2;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 38px;
             color: var(--color-primary);
         }
 
@@ -258,7 +274,7 @@
             width: 270px;
             overflow-x: clip;
             font-size: 16px;
-            line-height: 1.5;
+            line-height: 24px;
         }
 
         /*Core strengths wrap ends here*/
@@ -270,13 +286,26 @@
     <div class="masthead">
         <img src="/img/homepage/bg_home.png" alt class="background" id="background-homepage">
         <div class="intro-text">
-            <div class="half-opacity-tag intro-company-name rounded-full" data-i18n="index.masthead.tag">Tiger Migration</div>
-            <div class="primary-intro">
-                <p>
-                    <span data-i18n="index.masthead.title">Turkish passport investment</span>
-                    <span class="orange-underline" data-i18n="index.masthead.subtitle">(home purchase)</span>
-                </p>
-<!--                <p></p>-->
+            <div
+                class="half-opacity-tag intro-company-name rounded-full"
+                data-i18n="index.masthead.tag"
+                data-i18n-attr="style:styles.masthead.fontWeight"
+            >
+                Tiger Migration
+            </div>
+            <div class="primary-intro" data-i18n-attr="style:styles.masthead.display">
+<!--                <p>-->
+                    <div data-i18n="index.masthead.title" data-i18n-attr="style:styles.masthead.fontWeight">
+                        Turkish passport investment
+                    </div>
+                    <div
+                        class="orange-underline"
+                        data-i18n="index.masthead.subtitle"
+                        data-i18n-attr="style:styles.masthead.fontWeight"
+                    >
+                        (home purchase)
+                    </div>
+<!--                </p>-->
             </div>
             <div class="secondary-intro">
                 <p data-i18n="index.masthead.intro-1">400,000 USD purchase, passport for the whole family,</p>
@@ -309,7 +338,7 @@
             </div>
         </div>
         <div class="relative">
-            <div class="swiper">
+            <div class="swiper-consultants overflow-x-hidden">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide group">
                         <div class="normal">
@@ -401,10 +430,10 @@
 
                     </div>
                 </div>
-
             </div>
-            <div class="swiper-button-prev swiper-page-btn"></div>
-            <div class="swiper-button-next swiper-page-btn"></div>
+
+            <div class="swiper-button-prev swiper-consultants__page-btn"></div>
+            <div class="swiper-button-next swiper-consultants__page-btn"></div>
         </div>
     </div>
     <div class="gap-section section-wrap" id="strengths-wrap">
@@ -467,10 +496,10 @@
 <div id="footer"></div>
 <script>
     // Swiper initialization
-    const swiper = new Swiper('.swiper', {
+    const swiper = new Swiper('.swiper-consultants', {
         // Optional parameters
         direction: 'horizontal',
-        rewind: true,
+        loop: true,
         spaceBetween: 24,
         centeredSlides: false,
         slidesPerView: 'auto',

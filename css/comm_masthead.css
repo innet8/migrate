@@ -47,9 +47,9 @@
 .primary-intro {
     margin: 1.25rem 0;/* 20px 0 */
     color: white;
-    font-size: 3.75rem; /* 60px */
-    line-height: 1.15;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
     text-align: center;
 }
 
