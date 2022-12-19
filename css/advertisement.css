@@ -8,6 +8,9 @@
     color: white;
     border-radius: 1rem;
     background-color: var(--color-primary);
+
+    filter: drop-shadow(0px 4px 30px rgba(159, 159, 159, 0.3));
+
     overflow: hidden;
     z-index: 1;
 }
@@ -80,4 +83,34 @@
     right: 0;
     transform: translateX(-33.3%) translateY(-50%);
     z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .adv-separator {
+        top: 0;
+        left: 50%;
+        /*width: 100vw;*/
+        width: var(--max-mobile-width);
+        height: 350px;
+        transform-origin: top left;
+    }
+    .adv-bg {
+        left: -10%;
+    }
+    .adv-bg:before {
+        background-repeat: no-repeat;
+        background-position-y: 100%;
+    }
+    .adv-texts {
+        margin-left: 2rem;
+    }
+    .adv-tags {
+        flex-direction: column;
+    }
+    .adv-tag {
+        margin-bottom: 1rem;
+    }
+    .adv-dartboard {
+        display: none;
+    }
 }

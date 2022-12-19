@@ -14,7 +14,7 @@
     "styles": {
       "masthead": {
         "fontWeight": "font-weight: 500;",
-        "display": "display: flex; width: 720px;"
+        "primaryIntro": "primary-intro primary-intro__cn"
       }
     },
     "header": {
@@ -62,7 +62,7 @@
     },
     "index": {
       "masthead": {
-        "tag": "老虎科技",
+        "tag": "老虎移民",
         "title": "土耳其护照投资",
         "subtitle": "(购房)",
         "intro-1": "40万美元购买，全家护照，英美跳板",
@@ -239,7 +239,7 @@
         "text-2": "老虎科技一直致力于为全球的精英阶层提供“畅行无阻 定居无忧”的解决方案。从子女海外教育、投资置业、海外身份规划等方面，老虎科技不断在海外定居领域和全球化业务布局方面投入精力，不断为想要实现全球梦的人士提供搭建了通往世界的桥梁。",
         "text-3": "老虎科技设身处地站在客户利益角度出发，通过模式和产品创新，制定行业服务标准，致力为数万用户定制最合适的移民方案。",
         "quote": "“畅行无阻 定居无忧”",
-        "author": "老虎科技"
+        "author": "老虎移民"
       },
       "contacts": {
         "phone": "联系电话",

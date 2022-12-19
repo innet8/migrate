@@ -117,5 +117,9 @@ function header() {
         </div>
     </div>
     `
-    return {template: header, callback: languageDropdownBinding}
+    return {
+        template: header,
+        isForMobile: false,
+        callback: languageDropdownBinding
+    }
 }

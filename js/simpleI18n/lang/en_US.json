@@ -14,7 +14,7 @@
     "styles": {
       "masthead": {
         "fontWeight": "font-weight: 700;",
-        "display": "display: block; width: 1000px;"
+        "primaryIntro": "primary-intro primary-intro__en"
       }
     },
     "header": {

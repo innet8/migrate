@@ -6,6 +6,7 @@
     --color-card-background: #F9F9F9;
     --color-divider: rgba(226, 226, 224, 1);
     --passport-process-wrap: #FFF0E2;
+    --max-mobile-width: calc(100vw - 24px * 2);
 }
 
 body {
@@ -209,7 +210,6 @@ body {
     transform: translate(-150%, -50%);
     background-color: var(--color-primary);
 }
-
 
 .vertical-icons {
     position: absolute;

@@ -1,0 +1,28 @@
+@media screen and (max-width: 768px) {
+    #main {
+        overflow-x: hidden;
+        margin-top: 0;
+    }
+    .section-title-wrap {
+        width: var(--max-mobile-width);
+    }
+    .section-title {
+        font-size: 24px;
+        line-height: 28px;
+        width: var(--max-mobile-width);
+    }
+    .section-intro {
+        width: var(--max-mobile-width);
+        text-align: left;
+    }
+    .section-contents {
+        width: auto;
+    }
+    .swiper-consultants {
+        width: 80vw !important;
+    }
+    .vertical-icons {
+        width: var(--max-mobile-width);
+        transform: translate(-50%, 0%);
+    }
+}

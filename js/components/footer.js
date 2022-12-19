@@ -10,5 +10,5 @@ function footer() {
         ©2022 By Tiger.com All rights reserved.
     </div>
     `
-    return {template: header}
+    return {template: header, isForMobile: true}
 }

@@ -42,6 +42,7 @@
 
     <script src="/js/lateImg.js"></script>
 
+    <!-- Swiper -->
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -50,7 +51,9 @@
 
     <link rel="stylesheet" href="/css/webfonts.css">
     <link rel="stylesheet" href="/css/comm.css">
+    <link rel="stylesheet" href="/css/comm_mobile.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/header_mobile.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/advertisement.css">
     <link rel="stylesheet" href="/css/form.css">
@@ -76,11 +79,6 @@
     </style>
     <style type="text/tailwindcss">
         /*First page content starts here*/
-        #main {
-            @apply clear-both;
-            margin-top: 80px;
-        }
-
         .masthead {
             @apply relative w-full;
             height: 900px;
@@ -117,16 +115,6 @@
             font-weight: 500;
             font-size: 36px; /* 72px */
             line-height: 42px;
-        }
-
-        .primary-intro__en {
-            display: block;
-            width: 1000px;
-        }
-
-        .primary-intro__cn {
-            display: flex;
-            width: auto;
         }
 
         .secondary-intro {
@@ -203,6 +191,38 @@
             height: 426px;
         }
 
+        /* Swiper pagination buttons customization */
+        .consultants-wrap .swiper-button-prev:after{
+            content: '';
+            /*display: none !important;*/
+        }
+        .consultants-wrap .swiper-button-next:after{
+            content: '';
+            /*display: none !important;*/
+        }
+        .consultants-wrap .swiper-button-prev{
+            /*width: 20px;*/
+            /*height: 16px;*/
+            background-image: url('/img/svg/arrow_prev.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            /*bottom: 15px;*/
+        }
+        .consultants-wrap .swiper-button-prev:hover{
+            background-image: url('/img/svg/arrow_prev_hover.svg');
+        }
+        .consultants-wrap .swiper-button-next{
+            /*width: 20px;*/
+            /*height: 16px;*/
+            background-image:url('/img/svg/arrow_next.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            /*bottom: 15px;*/
+        }
+        .consultants-wrap .swiper-button-next:hover{
+            background-image:url('/img/svg/arrow_next_hover.svg');
+        }
+
         .normal {
             @apply absolute top-0 left-0 w-full h-full group-hover:opacity-0 opacity-100 px-8 py-4 flex flex-col
             justify-center items-center transition-all;
@@ -260,22 +280,34 @@
         .gap-section {
             position: relative;
             padding-top: 240px;
-            height: 1050px;
+            height: auto;
             flex-direction: column;
+        }
+
+        #strengths-wrap {
+            padding-bottom: 0;
         }
 
         .strengths-grid {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 1rem; /* 16px */
-            max-width: 90%;
+            max-width: var(--max-mobile-width);
+            width: var(--max-mobile-width);;
         }
 
         .strength-card {
             @apply relative pt-4 flex flex-row justify-start items-start bg-white rounded-lg overflow-hidden;
-            width: 384px;
+            width: 100%;
             height: 114px;
             margin-bottom: 24px;
+            transition: all 0.15s ease-in-out;
+            border: 1px solid transparent;
+        }
+
+        .strength-card:hover {
+            box-shadow: 0 4px 30px rgba(159, 159, 159, 0.3);
+            border: 1px solid var(--color-primary);
         }
 
         .strength-card:before {
@@ -312,6 +344,62 @@
 
         /*Core strengths wrap ends here*/
     </style>
+    <style type="text/tailwindcss">
+        @media screen and (min-width: 769px) {
+            #main {
+                margin-top: 0;
+            }
+            .background {
+                left: 50%;
+                width: 95%;
+                transform: translate(-50%, 0);
+                border-radius: 1.5rem; /* 24px */
+            }
+            .intro-company-name {
+                font-size: 32px;
+                line-height: 44px;
+            }
+            .primary-intro {
+                width: auto;
+                font-weight: 500;
+                font-size: 4.5rem; /* 72px */
+                line-height: 84px;
+            }
+            .secondary-intro {
+                font-size: 32px;
+                line-height: 44px;
+            }
+            .vertical-icons {
+                height: 136px;
+                padding: 2.5rem 1.25rem; /* 40px 20px */
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .vertical-icon {
+                width: 350px;
+                margin-bottom: 0;
+            }
+            .vertical-icon__divider{
+                display: block;
+            }
+            .gap-section {
+                height: 1050px;
+                padding: 50px 0 240px;
+            }
+            .strengths-grid {
+                max-width: 90%;
+                min-width: 1200px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .strength-card {
+                width: 384px;
+            }
+            .strength-img-container {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
 <div id="header"></div>
@@ -326,7 +414,8 @@
             >
                 Tiger Migration
             </div>
-            <div class="primary-intro" data-i18n-attr="style:styles.masthead.display">
+<!--            <div class="primary-intro">-->
+            <div class="primary-intro" data-i18n-attr="class:styles.masthead.primaryIntro">
 <!--                <p>-->
                     <div data-i18n="index.masthead.title" data-i18n-attr="style:styles.masthead.fontWeight">
                         Turkish passport investment
@@ -548,7 +637,8 @@
     const components = [
         {
             roots: ['#header'],
-            component: header
+            component: header,
+            alternative: headerMobile,
         },
         {
             roots: ['#footer'],

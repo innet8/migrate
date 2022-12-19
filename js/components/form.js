@@ -88,5 +88,5 @@ function form() {
         </div>
     </div>
   `
-    return {template: form}
+    return {template: form, isForMobile: true}
 }

@@ -14,7 +14,13 @@ function advertisement() {
             <ul class="adv-tags">
                 <li class="adv-tag half-opacity-tag" data-i18n="advertisement-1.tags.tag-1">Midland Direct</li>
                 <li class="adv-tag half-opacity-tag" data-i18n="advertisement-1.tags.tag-2">Conscientious Service</li>
-                <li class="adv-tag half-opacity-tag" data-i18n="advertisement-1.tags.tag-3">Success Guarantee</li>
+                <li 
+                    style="margin: 0;" 
+                    class="adv-tag half-opacity-tag" 
+                    data-i18n="advertisement-1.tags.tag-3"
+                >
+                    Success Guarantee
+                </li>
             </ul>
         </div>
         <img src="/img/homepage/dartboard.png" alt class="adv-dartboard">

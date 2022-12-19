@@ -31,10 +31,12 @@
 
     <!--    Components-->
     <script src="/js/components/header.js"></script>
+    <script src="/js/components/header_mobile.js"></script>
     <script src="/js/components/footer.js"></script>
     <script src="/js/components/form.js"></script>
     <script src="/js/render.js"></script>
 
+    <!-- Swiper -->
     <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -43,8 +45,10 @@
 
     <link rel="stylesheet" href="/css/webfonts.css">
     <link rel="stylesheet" href="/css/comm.css">
+    <link rel="stylesheet" href="/css/comm_mobile.css">
     <link rel="stylesheet" href="/css/comm_masthead.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/header_mobile.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/form.css">
 
@@ -59,13 +63,19 @@
     </style>
     <style type="text/tailwindcss">
         /* Immigration reasons start here */
+        .reasons-wrap {
+            padding: 50px 0;
+        }
         .immi-reasons {
-            @apply flex flex-row justify-center items-start;
+            @apply flex justify-center items-start;
+            flex-direction: column;
+            max-width: var(--max-mobile-width);
         }
 
         .immi-reason {
-            @apply mx-9 flex flex-col justify-center items-center;
-            width: 240px;
+            @apply flex flex-col justify-center items-center;
+            margin: 24px 0;
+            width: auto;
         }
 
         .immi-reason h1 {
@@ -325,15 +335,27 @@
             font-size: 20px;
             line-height: 24px;
         }
-
         /* Passport ends here */
+        @media screen and (min-width: 769px) {
+            .reasons-wrap {
+                padding: 50px 0 120px;
+            }
+            .immi-reasons {
+                max-width: 1250px;
+                flex-direction: row;
+            }
+            .immi-reason {
+                @apply mx-9;
+                width: 240px;
+            }
+        }
     </style>
 </head>
 <body>
 <div id="header"></div>
 <div id="main">
     <div class="masthead">
-        <img src="/img/services/bg_services.png" alt class="background" id="background-homepage">
+        <img src="/img/services/bg_services.png" alt class="background" id="background-service">
         <div class="intro-text">
             <div class="half-opacity-tag intro-company-name rounded-full" data-i18n="services.masthead.tag">Turkey</div>
             <div class="primary-intro" data-i18n="services.masthead.title">
@@ -384,7 +406,7 @@
         </div>
     </div>
     <div class="section-wrap gap-section flex-col">
-        <div class="section-title-wrap mt-36 w-fit">
+        <div class="section-title-wrap">
             <div class="half-opacity-tag section-top rounded-full" data-i18n="services.advantages.tag">About Turkey
             </div>
             <div class="section-title w-800" data-i18n="services.advantages.title">Home purchase to achieve home
@@ -608,7 +630,8 @@
     const components = [
         {
             roots: ['#header'],
-            component: header
+            component: header,
+            alternative: headerMobile,
         },
         {
             roots: ['#footer'],

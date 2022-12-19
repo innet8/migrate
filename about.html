@@ -31,6 +31,7 @@
 
     <!--    Components-->
     <script src="/js/components/header.js"></script>
+    <script src="/js/components/header_mobile.js"></script>
     <script src="/js/components/footer.js"></script>
     <script src="/js/render.js"></script>
 
@@ -42,9 +43,18 @@
 
     <link rel="stylesheet" href="/css/webfonts.css">
     <link rel="stylesheet" href="/css/comm.css">
+    <link rel="stylesheet" href="/css/comm_mobile.css">
     <link rel="stylesheet" href="/css/comm_masthead.css">
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/header_mobile.css">
     <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Swiper -->
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!--    Noto Sans || 思源黑体-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900">
@@ -176,7 +186,7 @@
 <div id="header"></div>
 <div id="main">
     <div class="masthead">
-        <img src="/img/about/bg_about.png" alt class="background" id="background-homepage">
+        <img src="/img/about/bg_about.png" alt class="background" id="background-about">
         <div class="intro-text">
             <div
                 class="half-opacity-tag intro-company-name rounded-full"
@@ -293,7 +303,8 @@
     const components = [
         {
             roots: ['#header'],
-            component: header
+            component: header,
+            alternative: headerMobile,
         },
         {
             roots: ['#footer'],
