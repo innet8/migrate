@@ -6,16 +6,22 @@
     <meta
             name="description"
             lang="en"
-            content="Tiger Technology, a one-stop integrated cross-border service provider with a
-        focus on Turkish immigration services, is a global service provider."
+            content="Tiger Migrate, a one-stop integrated cross-border service
+            provider with a focus on Turkish immigration services, is a global service provider."
     />
     <meta
             name="description"
             lang="zh_CN"
-            content="老虎科技,以土耳其移民服务为主的一站式综合跨境服务机构,面向全球服务."
+            content="老虎移民,以土耳其移民服务为主的一站式综合跨境服务机构,面向全球服务."
     />
-    <meta name="keywords" lang="en" content="UZAQ,Noodles,delicious,tasty"/>
-    <meta name="keywords" lang="zh_CN" content="移民,购房,定居"/>
+    <meta
+            name="description"
+            lang="zh_TW"
+            content="老虎移民,以土耳其移民服務為主的一站式綜合跨境服務機構,面向全球服務."
+    />
+    <meta name="keywords" lang="en" content="Migrate,buy a home,settle" />
+    <meta name="keywords" lang="zh_CN" content="移民,购房,定居" />
+    <meta name="keywords" lang="zh_TW" content="移民,購房,定居" />
 
     <title>Tiger Migration - Immigration Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -63,11 +69,15 @@
         }
 
         .immi-reason h1 {
-            @apply mt-4 mb-6 text-xl;
+            @apply mt-4 mb-6;
+            font-size: 20px;
+            line-height: 23px;
         }
 
         .immi-reason p {
-            @apply text-base;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
             color: var(--color-secondary);
         }
 
@@ -106,6 +116,8 @@
             box-shadow: 0 0 15px rgba(159, 159, 159, 0.15);
             transition: all 0.3s ease-in-out;
             border: 2px solid transparent;
+            font-size: 16px;
+            line-height: 24px;
         }
 
         .purchase-advantage:hover {
@@ -212,11 +224,15 @@
         }
 
         .talk-card h1 {
-            @apply text-xl mb-6;
+            @apply mb-6;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
         }
 
         .talk-card p {
-            @apply text-base;
+            font-size: 16px;
+            line-height: 24px;
             color: var(--color-secondary);
         }
 
@@ -238,7 +254,13 @@
         }
 
         .passport-intro__left {
-            @apply text-base text-left;
+            @apply text-left;
+        }
+
+        .passport-intro__left ol {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
         }
 
         .passport-intro__right {
@@ -253,7 +275,11 @@
         }
 
         .intro-title {
-            @apply text-3xl text-black mb-6;
+            @apply mb-6;
+            color: black;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
         }
 
         .passport-process-wrap {
@@ -295,6 +321,9 @@
 
         .passport-process li > span {
             margin-right: .5em;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
         }
 
         /* Passport ends here */
@@ -310,7 +339,7 @@
             <div class="primary-intro" data-i18n="services.masthead.title">
                 <p>Overseas investment wind vane</p>
             </div>
-            <div class="secondary-intro" data-i18n="services.masthead.desc">
+            <div class="secondary-intro" data-i18n="services.masthead.intro">
                 <p>One Step to Identity + Homeownership</p>
             </div>
         </div>
@@ -380,8 +409,8 @@
                         <img src="/img/svg/ico_location_2.svg" alt>
                     </div>
                     <div class="float-card-text">
-                        <h1 class="text-3xl font-bold" data-i18n="services.advantages.img-title">Mesa Avenue</h1>
-                        <span class="float-card-addr" data-i18n="services.advantages.img-desc">Property Address</span>
+                        <h1 class="float-card-addr" data-i18n="services.advantages.img-title">Mesa Avenue</h1>
+                        <span class="float-card-desc" data-i18n="services.advantages.img-desc">Property Address</span>
                     </div>
                 </div>
             </div>

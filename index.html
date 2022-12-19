@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
-        name="description"
-        lang="en"
-        content="Tiger Technology, a one-stop integrated cross-border service provider with a
-        focus on Turkish immigration services, is a global service provider."
+            name="description"
+            lang="en"
+            content="Tiger Migrate, a one-stop integrated cross-border service
+            provider with a focus on Turkish immigration services, is a global service provider."
     />
     <meta
-        name="description"
-        lang="zh_CN"
-        content="老虎科技,以土耳其移民服务为主的一站式综合跨境服务机构,面向全球服务."
+            name="description"
+            lang="zh_CN"
+            content="老虎移民,以土耳其移民服务为主的一站式综合跨境服务机构,面向全球服务."
+    />
+    <meta
+            name="description"
+            lang="zh_TW"
+            content="老虎移民,以土耳其移民服務為主的一站式綜合跨境服務機構,面向全球服務."
     />
     <meta name="keywords" lang="en" content="Migrate,buy a home,settle" />
     <meta name="keywords" lang="zh_CN" content="移民,购房,定居" />
+    <meta name="keywords" lang="zh_TW" content="移民,購房,定居" />
+
+    <title>Tiger Migration - Focus on Turkish Immigration</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Simple i18n -->
@@ -23,6 +32,7 @@
 
     <!--    Components-->
     <script src="/js/components/header.js"></script>
+    <script src="/js/components/header_mobile.js"></script>
     <script src="/js/components/footer.js"></script>
     <script src="/js/components/advertisement.js"></script>
     <script src="/js/components/form.js"></script>
@@ -37,8 +47,6 @@
         href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
-    <title>Tiger Migration - Focus on Turkish Immigration</title>
 
     <link rel="stylesheet" href="/css/webfonts.css">
     <link rel="stylesheet" href="/css/comm.css">
@@ -70,6 +78,7 @@
         /*First page content starts here*/
         #main {
             @apply clear-both;
+            margin-top: 80px;
         }
 
         .masthead {
@@ -78,8 +87,8 @@
         }
 
         .background {
-            @apply absolute top-0 left-1/2 transform -translate-x-1/2 rounded-3xl;
-            width: 95%;
+            @apply absolute;
+            top: 0;
             height: 770px;
             object-fit: cover;
             z-index: -1;
@@ -93,33 +102,55 @@
         }
 
         .intro-company-name {
-            @apply text-2xl uppercase;
+            @apply uppercase;
             font-weight: 500;
-            font-size: 32px;
-            line-height: 44px;
+            font-size: 16px;
+            line-height: 22px;
             padding: 0.875rem 1.75rem;/* 14px 28px */
             background-color: rgba(255, 255, 255, 0.1);
         }
 
         .primary-intro {
-            @apply mt-6 mb-9 text-white font-medium text-center;
+            @apply mt-6 mb-9 text-white text-center;
             /*width: 1000px;*/
             /*max-width: 790px;*/
             font-weight: 500;
-            font-size: 4.5rem; /* 72px */
-            line-height: 84px;
+            font-size: 36px; /* 72px */
+            line-height: 42px;
+        }
+
+        .primary-intro__en {
+            display: block;
+            width: 1000px;
+        }
+
+        .primary-intro__cn {
+            display: flex;
+            width: auto;
         }
 
         .secondary-intro {
             @apply text-center;
             font-weight: 400;
-            font-size: 32px;
-            line-height: 44px;
+            font-size: 16px;
+            line-height: 22px;
         }
 
         .vertical-icons {
+            height: auto;
+            padding: 1.25rem; /* 20px */
             background-color: white;
             color: var(--color-secondary);
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .vertical-icon {
+            width: auto;
+            margin-bottom: 10px;
+        }
+        .vertical-icon__divider {
+            display: none;
         }
         /*First page content ends here*/
         /*Consultants content starts here*/
@@ -165,7 +196,7 @@
             @apply translate-x-1/2 right-0;
         }
 
-        .swiper-slide {
+        .swiper-consultants .swiper-slide {
             @apply relative rounded-lg overflow-hidden;
             min-width: 282px;
             max-width: 300px;
@@ -234,9 +265,10 @@
         }
 
         .strengths-grid {
-            @apply grid grid-cols-3 gap-4;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 1rem; /* 16px */
             max-width: 90%;
-            min-width: 1200px;
         }
 
         .strength-card {
@@ -259,6 +291,7 @@
             @apply row-span-3;
             width: 384px;
             height: 384px;
+            display: none;
         }
 
         .strength-card-num {
@@ -323,7 +356,7 @@
                 <p class="vertical-icon__text" data-i18n="index.masthead.icons.icon-2">98% Pass Rate Guarantee</p>
             </div>
             <div class="vertical-icon__divider"></div>
-            <div class="vertical-icon">
+            <div class="vertical-icon" style="margin-bottom: 0;">
                 <img src="/img/svg/advantage_3.svg" alt class="vertical-icon__img">
                 <p class="vertical-icon__text" data-i18n="index.masthead.icons.icon-3">Full service from application to card pickup</p>
             </div>
