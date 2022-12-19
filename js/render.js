@@ -42,8 +42,12 @@ function render(roots, template) {
  * */
 const renderPage = (componentsList) => {
     componentsList.forEach(item => {
-        // if this device is mobile, render mobile components
-        if (isThisDeviceMobile() && !item.component()?.isForMobile) {
+        // if this device is mobile && this component is not for mobile,
+        // render its alternative mobile components
+        if (isThisDeviceMobile()
+            && !item.component()?.isForMobile
+            && typeof item.alternative === 'function'
+        ) {
             render(item.roots, item.alternative()?.template)
             if (typeof item.alternative()?.callback === 'function') {
                 item.alternative()?.callback()
