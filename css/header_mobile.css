@@ -99,7 +99,7 @@
 }
 
 #is-language-opened__label {
-    padding: var(--margin-left-per-level) 16px;
+    padding: var(--margin-left-per-level) 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
