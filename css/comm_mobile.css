@@ -26,6 +26,9 @@
         width: var(--max-mobile-width);
         text-align: left;
     }
+    .centered-intro {
+        text-align: center;
+    }
     .section-contents {
         width: auto;
     }

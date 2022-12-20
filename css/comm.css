@@ -112,6 +112,10 @@ body {
     color: var(--color-secondary);
 }
 
+.centered-intro {
+    text-align: center;
+}
+
 .section-contents {
     width: 600px;
     max-height: 700px;
