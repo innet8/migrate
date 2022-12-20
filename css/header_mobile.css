@@ -1,3 +1,10 @@
+:root{
+    --side-menu-btn-size: 80px;
+    --language-list-height: 0;
+    --mobile-header-link-height: 71px;
+    --margin-left-per-level: 22px
+}
+
 .header-container__mobile {
     position: fixed;
     /*height: 6rem; !* 96px *!*/
@@ -42,47 +49,139 @@
 
 #header-menu {
     position: relative;
-    width: 70%;
+    /*width: 70%;*/
+    width: calc(100vw - var(--side-menu-btn-size));
     min-width: 100px;
-    max-width: 320px;
+    max-width: 500px;
     height: 100vh;
 
-    padding-top: 80px;
+    padding: 0 24px;
+    /*padding-top: 80px;*/
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    background-color: var(--color-primary);
-    color: #fff;
+    align-items: flex-start;
+    /*background-color: var(--color-primary);*/
+    /*color: #fff;*/
+    background-color: white;
 
     pointer-events: auto;
     z-index: 1000;
 }
 #header-menu a {
-    margin-bottom: 1em;
+    width: 100%;
+    height: var(--mobile-header-link-height);
+    padding: var(--margin-left-per-level) 16px;
+    color: var(--color-secondary);
+    border-radius: 4px;
+    transition: all .15s ease-in-out;
 }
 
-.header-menu__divider {
-    width: 50%;
-    height: 1px;
-    background-color: #FFFFFFAA;
-    margin: 1em 0;
+#header-menu a:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
 }
 
-#header-content {
-    position: relative;
+/*.header-menu__divider {*/
+/*    width: 50%;*/
+/*    height: 1px;*/
+/*    background-color: #FFFFFFAA;*/
+/*    margin: 1em 0;*/
+/*}*/
+
+#mobile-language-switcher {
+    width: 100%;
+    /*padding: 22px 16px;*/
+    color: var(--color-secondary);
+    border-radius: 4px;
+    transition: all .15s ease-in-out;
+}
+
+#is-language-opened__label {
+    padding: var(--margin-left-per-level) 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+}
+
+#is-language-opened__label:hover,
+#is-language-opened__label:focus,
+#is-language-opened__label:active {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+#is-language-opened__label input[type=checkbox] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+#is-language-opened__label input[type=checkbox]:checked ~ #is-language-opened__label {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+#is-language-opened__icon{
+    margin-left: 12px;
+    width: 15px;
+    height: 9px;
+    object-fit: cover;
+    transition: all .15s ease-in-out;
+}
+
+#is-language-opened__icon path {
+    transition: all .15s ease-in-out;
+}
+
+#is-language-opened:checked ~ #is-language-opened__icon {
+    transform: rotate(180deg);
+}
+
+#is-language-opened:checked ~ #is-language-opened__icon path,
+#is-language-opened:checked ~ #is-language-opened__icon:hover ~ path {
+    stroke: var(--color-primary);
+}
+
+.language-list {
+    height: var(--language-list-height);
+    margin-left: var(--margin-left-per-level);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    transition: height .15s ease-in-out;
+}
+
+.header-content {
+    /*position: relative;*/
     height: 80px !important;
     width: 100%;
     background-color: #fff;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+}
+
+#inner-logo-wrap {
+    margin-bottom: 36px;
+}
+
+#outer-logo-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 24px;
 
     /*box-shadow: 4px 14px 23px -10px rgba(0,0,0,0.1);*/
     box-shadow: 0 0 15px rgba(159, 159, 159, 0.15);
-    z-index: 1;
+    z-index: -1;
 }
 
 .header-mask {
@@ -107,8 +206,9 @@
 .side-menu-btn {
     position: absolute;
     top: 0;
-    left: 0;
-    height: 80px;
+    right: 0;
+    height: var(--side-menu-btn-size);
+    width: var(--side-menu-btn-size);
     padding: 15px;
     cursor: pointer;
     -webkit-transition: 0.3s;

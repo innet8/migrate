@@ -9,6 +9,9 @@
     .section-title-wrap {
         width: var(--max-mobile-width);
     }
+    .section-title {
+        font-weight: 600;
+    }
     .section-top {
         padding: 0.375rem 0.75rem;
         font-size: 15px;
