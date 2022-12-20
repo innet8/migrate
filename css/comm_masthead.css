@@ -45,7 +45,7 @@
 }
 
 .primary-intro {
-    margin: 1.25rem 0;/* 20px 0 */
+    margin: 1.25rem 0; /* 20px 0 */
     color: white;
     font-weight: 700;
     font-size: 56px;
@@ -64,32 +64,44 @@
 }
 
 .secondary-intro {
+    width: auto;
     text-align: center;
     font-size: 1.6em;
 }
+
 /*First page content ends here*/
 @media screen and (max-width: 768px) {
     #main {
         margin-top: 80px;
     }
+
     .background {
         width: auto;
         border-radius: 0;
     }
+
     .intro-company-name {
         font-size: 16px;
         line-height: 22px;
     }
+
+    .intro-text {
+        max-width: var(--max-mobile-width);
+    }
+
     .primary-intro {
         width: auto;
         max-width: var(--max-mobile-width);
         font-size: 36px;
         line-height: 42px;
     }
+
     .primary-intro__cn, .primary-intro__en {
         width: auto;
     }
+
     .secondary-intro {
+        width: var(--max-mobile-width);
         font-size: 16px;
         line-height: 22px;
     }

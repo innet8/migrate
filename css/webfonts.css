@@ -1,8 +1,54 @@
-@font-face {font-family: "HarmonyOS Sans";
-    src: url("webfonts/HarmonyOS_Sans/HarmonyOSSans.eot"); /* IE9*/
-    src: url("webfonts/HarmonyOS_Sans/HarmonyOSSans.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("./webfonts/HarmonyOS_Sans/HarmonyOSSans.woff2") format("woff2"), /* chrome、firefox */
-    url("./webfonts/HarmonyOS_Sans/HarmonyOSSans.woff") format("woff"), /* chrome、firefox */
-    url("./webfonts/HarmonyOS_Sans/HarmonyOSSans.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url("webfonts/HarmonyOS_Sans/HarmonyOSSans.svg#HarmonyOS Sans") format("svg"); /* iOS 4.1- */
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Light.woff2') format('woff2'),
+    url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Bold.woff2') format('woff2'),
+    url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Black.woff2') format('woff2'),
+    url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Medium.woff2') format('woff2'),
+    url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Thin.woff2') format('woff2'),
+    url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans_Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans.woff2') format('woff2'),
+    url('./webfonts/HmOS_Sans_multi_weight/HarmonyOS_Sans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

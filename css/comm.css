@@ -86,10 +86,9 @@ body {
 }
 
 .section-top {
-    font-weight: bold;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
     background-color: var(--color-primary-most-opaque);
+    font-weight: 700;
     font-size: 1.25rem; /* 20px */
     line-height: 23px;
     color: var(--color-primary);
@@ -157,7 +156,7 @@ body {
     height: 100%;
     position: relative;
     grid-column: span 2 / auto;
-    padding-left: 2rem; /* 32px */
+    padding-left: 1rem; /* 32px */
     background-color: white;
     display: flex;
     flex-direction: column;

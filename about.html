@@ -67,7 +67,7 @@
     </style>
     <style type="text/tailwindcss">
         .company-wrap {
-            padding: 140px 0;
+            padding: 70px 0;
         }
 
         .company-profile {
@@ -81,8 +81,8 @@
 
         .profile-title {
             @apply text-left;
-            font-size: 3rem; /* 48px */
-            line-height: 56px;
+            font-size: 24px;
+            line-height: 28px;
         }
 
         .profile-title-wrap {
@@ -93,20 +93,32 @@
             @apply text-left;
             font-size: 16px;
             line-height: 24px;
-            width: 550px;
+            width: auto;
         }
 
         .profile-intro > p {
             margin-bottom: 1rem; /* 16px */
         }
 
+        .profile-left {
+            width: var(--max-mobile-width);
+            margin: 0 auto;
+        }
+
+        .profile-left .section-contents {
+            margin-right: 0;
+            max-height: fit-content;
+        }
+
         .profile-right {
-            @apply flex flex-row justify-evenly;
-            width: 525px;
-            height: 600px;
+            @apply flex flex-row;
+            margin: 0 auto;
+            width: var(--max-mobile-width);
+            justify-content: center;
         }
 
         .profile-img {
+            transform: scale(.9);
             object-fit: cover;
         }
 
@@ -116,14 +128,15 @@
         }
 
         #profile-img-2 {
-            @apply self-center;
+            align-self: flex-end;
             width: 220px;
         }
 
         .profile-card {
             width: 400px;
             bottom: 0;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             border-radius: 0.5rem;
             overflow: hidden;
         }
@@ -160,8 +173,18 @@
             z-index: 2;
         }
         .vertical-icons {
+            height: auto;
+            padding: 1.25rem; /* 20px */
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
             background-color: var(--color-primary);
             color: white;
+        }
+        .vertical-icon {
+            width: auto;
+            margin-bottom: 10px;
         }
         .vertical-icon__text {
             display: flex;
@@ -179,6 +202,63 @@
             font-size: 1rem; /* 16px */
             line-height: 1.5rem; /* 24px */
             font-weight: 400;
+        }
+        .vertical-icon__divider {
+            display: none;
+        }
+
+        @media screen and (min-width: 769px) {
+            .company-wrap {
+                padding: 140px 0;
+            }
+            .profile-left {
+                width: auto;
+                margin: 0;
+            }
+
+            .profile-left .section-contents {
+                margin-right: 1.5rem;
+            }
+
+            .profile-right {
+                margin: 0;
+                width: 525px;
+                height: 600px;
+                justify-content: space-evenly;
+            }
+
+            .profile-title {
+                font-size: 3rem; /* 48px */
+                line-height: 56px;
+            }
+
+            .profile-img {
+                transform: scale(1);
+            }
+            #profile-img-2 {
+                align-self: center;
+            }
+
+            .profile-card {
+                left: 0;
+                transform: translateX(0);
+            }
+
+            .profile-intro {
+                width: 550px;
+            }
+
+            .vertical-icons {
+                height: 136px;
+                padding: 2.5rem 1.25rem; /* 40px 20px */
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .vertical-icon {
+                width: 350px;
+                margin-bottom: 0;
+            }
         }
     </style>
 </head>
@@ -285,7 +365,7 @@
                 </div>
             </div>
             <div class="vertical-icon__divider"></div>
-            <div class="vertical-icon">
+            <div class="vertical-icon" style="margin-bottom: 0;">
                 <img src="/img/svg/ico_addr.svg" alt class="vertical-icon__img">
                 <div class="vertical-icon__text">
                     <p class="vertical-icon__text-title" data-i18n="about.contacts.address">Company Address</p>
