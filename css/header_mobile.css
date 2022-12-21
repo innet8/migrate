@@ -1,7 +1,7 @@
 :root{
     --side-menu-btn-size: 80px;
     --language-list-height: 0;
-    --mobile-header-link-height: 71px;
+    --mobile-header-link-height: calc(16 + 18 * 2)px;
     --margin-left-per-level: 22px
 }
 
@@ -57,6 +57,8 @@
 
     padding: 0 24px;
     /*padding-top: 80px;*/
+    font-size: 16px;
+    line-height: 16px;
 
     display: flex;
     flex-direction: column;
